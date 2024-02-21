@@ -1,5 +1,6 @@
 import React from 'react'; 
 import  {Navbar} from 'reactstrap';
+import {Link } from 'react-router-dom';
 
 
 const Switch = () => {
@@ -38,16 +39,38 @@ class Header extends React.Component{
 
                     </div>
                                      
-                
+                 
                     <div  className = "col d-none d-md-block d-lg-block  nav-btn" >
+
+                    <Link to = {"/portfolio"}
+                    style= {{
+                        color:  "blanchedalmond" ,
+                        textDecoration: "none"
+                        }}>
                         portfolio
-                    </div>
-                   
-                    <div className = "col d-none  d-md-block d-lg-block nav-btn"  >
-                        projects
+
+                        </Link>
                     </div>
 
-                    <div className = "col d-none  d-md-block d-lg-block nav-btn" >
+                    
+                   
+                
+                    <div className = "col d-none  d-md-block d-lg-block nav-btn"  >
+                    <Link to = {"/projects"}
+                      style= {{
+                      color:  "blanchedalmond" ,
+                      textDecoration: "none"
+                      }}>
+                        projects
+                        </Link>
+                    </div>
+                    
+
+                    <div className = "col d-none  d-md-block d-lg-block nav-btn" 
+                    style ={{
+                      color:"blanchedalmond",
+                      textDecoration: "none"
+                    }} >
                         resume
                     </div>
  

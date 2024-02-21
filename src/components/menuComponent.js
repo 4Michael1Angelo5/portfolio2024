@@ -19,6 +19,8 @@ class BurgerMenu extends React.Component{
 
           <Link id="home" className="menu-item" to='/' >Home</Link>
 
+          <Link id="portfolio" className="menu-item" to='/portfolio' >Portfolio</Link>
+
           <Link id="about" className="menu-item" to='/projects'>  Projects </Link>
 
 

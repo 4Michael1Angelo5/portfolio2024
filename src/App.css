@@ -77,6 +77,8 @@
   border-radius: 42px;
   box-shadow: 5px 10px;
 }
+
+/* ------------------------------  Beer me switch -----------------------------*/
  
 
 .react-switch-checkbox {
@@ -106,7 +108,7 @@
   height: 45px;
   border-radius: 45px;
   transition: 0.2s;
-  background: #5c2d2d;
+  background: #ce93d8;
   box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
 }
 
@@ -118,6 +120,9 @@
 .react-switch-label:active .react-switch-button {
   width: 60px;
 }
+
+
+/* ------------------------------  logo -----------------------------*/
 
  .logo{
 
@@ -131,6 +136,8 @@
   border-radius: 100%;
 
  }
+
+ /* ------------------------------  Burger Menu -----------------------------*/
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
@@ -186,8 +193,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-  /* fill: #ec4079c1;; */
-  fill : #E91E63;
+   
+  fill : #d887e5
 }
 
 /* Wrapper for item list */
@@ -211,17 +218,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 
-/* Projects Page */
-
-.projects-page{
-  padding-bottom: 100px;  
-  background-image: url('./assets/images/image.png'),linear-gradient(160deg, rgba(65, 89, 208, 1) 0%, rgba(200, 80, 192, 1) 83%, rgba(205, 176, 54, .82)  100%);
-  background-position: 78% 0%;
-  background-repeat: repeat-y;
-  background-blend-mode: luminosity;
-  
-
-}
+/* ------------------------------  Projects Page -----------------------------*/
 
 .projects-main-image{
 
@@ -231,30 +228,29 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .projects-title {
-
-  /* background: -webkit-linear-gradient(160deg, rgb(95 28 9) 0%, rgb(99 29 94) 55%, rgb(20 21 78) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: #5d101000; */
   font-family: cut-out;
   color: blanchedalmond;
   border-bottom: 2px solid;
   width: fit-content;
   border-image: linear-gradient(90deg, blanchedalmond, #96c4eb) 30;
+  font-size: 18px;
 }
 
 
 
-.projects-page h1{
+.projects-page-h1-title{
   font-family: cut-out;
   color: blanchedalmond;
 }
 
-.projects-page p{
+.projects-page-p{
   font-size: larger;
   font-family: sans-serif;
   color: aliceblue ; 
 }
+
+ 
+
 
 .project-link-chill-vibes a {
 
@@ -277,7 +273,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background-color: rgb(121 50 186); ; 
   border: 1px solid rgb(213, 185, 148)  ; 
  
+}
 
+.border-bottom-p{
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, blanchedalmond, #96c4eb) 30;
 }
 
 .link-button-projects{
@@ -291,7 +291,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background-color:  #19162d5c;
   text-align: center;
   padding : 22px 9px;
-  /* background: radial-gradient(circle at 100px 100px,blue ,  #8e1ed6, #f896ce); */
   box-shadow: 2.5px 5px;
   text-decoration: none;
 
@@ -311,7 +310,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background-color:  #19162d5c;
   text-align: center;
   padding : 29px 0px;
-  /* background: radial-gradient(circle at 100px 100px, #5cabff, #911ca6); */
   box-shadow: 5px 10px;
   display:table-cell;
 
@@ -319,7 +317,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 
 .link-button-resume{
-
   position: relative;
   width : 135px ; 
   height: 135px ; 
@@ -328,7 +325,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background-color:  #19162d5c;
   text-align: center;
   padding : 22px 9px;
-  /* background: radial-gradient(circle at 168px 124px, #1310e6d9 0%, #a61c5c54 86%, #ff00008a 95%); */
   box-shadow: 5px 10px;
   display: table-cell;
   padding: 40px 0px;
@@ -339,48 +335,47 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .button-group{
       /* position: absolute; */
       margin: -14vh;
+         
      
-     
+}
+
+.link-button-resume:hover{
+
+  cursor: pointer;
+  background: radial-gradient(circle at 168px 124px, #1310e6d9 0%, #a61c5c54 86%, #ff00008a 95%) !important ;
+
+
+
 }
 
 .link-button-portfolio:hover{
+
   cursor: pointer;
-  background:red
+  background: radial-gradient(circle at 119px 124px, #1310e6d9 0%, #a61c5c54 86%, #ff00008a 95%) !important ;
 
-};
-
- .link-button-projects:hover{
-  cursor: pointer;
-  background:red
-};
-
- .link-button-resume:hover{
-  cursor: pointer;
-  background: red
-
-};
-
-
-.iphone-case-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: clamp(1rem, 3vw, 3rem);
-  padding: .5rem;
 }
 
-.iphone-case {
-  --border-radius-outer: 2rem;
-  --outer-padding: 0.5rem;
-  --case-color: hsl(0, 0%, 0%);
-  --border-radius-inner: calc( var(--border-radius-outer) - var(--outer-padding));
+.link-button-projects:hover{
+
+  cursor: pointer;
+  background: radial-gradient(circle at 100px 100px, #1310e6d9 0%, #a61c5c54 86%, #ff00008a 95%) !important ;
+
+}
+
+.iphone-case-1{
+   
+  width: 50%;
+  border: 2px solid hsl(223, 15%, 91%);
   box-shadow: 0px 0px 0px 2px white;
-  background-color: var(--case-color);
-  border-radius: var(--border-radius-outer);
-  padding: var(--outer-padding);
-  width: min(250px);
   aspect-ratio: 1/2;
-  position: relative;
-  margin-inline: auto;
+  border-radius: 20px;
+  background-color: #1fa8dc;
+  box-shadow: inset 1px 1px 1.1em 0.25em hsl(0deg 32.81% 78.55%), 0px 0px 14px 6px hsl(241.68deg 42.21% 35.27%);
 }
- 
+
+.tech-title{
+  font-family: cut-out;
+  color: blanchedalmond;
+  font-size: 18px;
+}
  

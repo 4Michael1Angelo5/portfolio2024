@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link} from 'react-router-dom';
 import { Container } from 'reactstrap';
-import ProjectOverview from './projectOverviewComponent';
-
- 
 
 
 class Projects extends React.Component{    
@@ -19,20 +16,24 @@ class Projects extends React.Component{
 
         return(
                 
-        <div className = 'projects-page' id ='projects-page'>
+        // <div className = 'projects-page' id ='projects-page'>
 
+        <React.Fragment>
+
+      
 
                 <Container>
                     
-                <h1> Projects</h1>
+                <h1 className = "projects-page-h1-title"> Projects</h1>
 
                             
-                <p>
-                I'm baby microdosing gastropub tumblr DSA sartorial fingerstache
-                swag drinking vinegar readymade squid chambray ascot neutral milk 
-                hotel. YOLO post-ironic snackwave retro. Organic street art shoreditch 
-                shabby chic hexagon fam vaporware tumeric ramps gatekeep seitan DSA. Blue 
-                bottle retro cornhole iPhone, disrupt letterpress austin.
+                <p className = "projects-page-p">
+                Who doesn't like a little recreational math?..(crickets).                 
+                Well, I guess it's not for everyone, but there's something about 
+                solving these complex problems that gives me great satisfaction. 
+                This drive to find solutions to complex, often abstract, problems, 
+                makes me excel as a web developer. I have perseverance. I may not know everything
+                but I can learn and I don't easily give up. Here are some of the side projects I've worked on.
                 </p>
               
 
@@ -56,16 +57,13 @@ class Projects extends React.Component{
                             <div  className=' col-lg-6 col-sm-12 pb-2 '>
         
                                 <h2 className = 'projects-title'> {item.title} </h2>
-                                <p className = "d-none d-md-block d-lg-block">
+                                <p className = "d-none d-md-block d-lg-block projects-page-p">
                                     {item.description}
                                 </p>
                                 
                             </div>
         
-                            <div  className='col-lg-6 col-sm-12 pb-3' 
-
-                                // onClick={ e=>(this.props.chooseProject(e,item))}
-                                > 
+                            <div  className='col-lg-6 col-sm-12 pb-3'> 
 
                                 <Link
                                 to = {"/projects/" + item.title.replace(/\s/g, '')} >
@@ -102,7 +100,10 @@ class Projects extends React.Component{
             </div>
  
     
-        </div>
+        {/* </div> */}
+
+        </React.Fragment>
+
                 
          
          

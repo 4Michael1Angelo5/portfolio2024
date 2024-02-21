@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from './headerComponent';
-import BurgerMenu from './menuComponent';
 import { Link } from 'react-router-dom';
  
 
@@ -53,7 +51,7 @@ class LandingPage extends React.Component{
                     textDecoration: "none"
                     }}>
 
-            <div className= "link-button-projects"> 
+            <div className= "link-button-projects link-btn"> 
 
                 <div style ={{ color:"burlywood"}}>
                 projects
@@ -62,20 +60,31 @@ class LandingPage extends React.Component{
             </div>
                 
         </Link>
+
         
-        <div className= "link-button-portfolio">
+        <Link to = {"/portfolio"}
+        style= {{
+            color:  "rgb(55 46 53) " ,
+            textDecoration: "none"
+            }}>
+        
+        <div className= "link-button-portfolio link-btn">
             <div style ={{ color:"burlywood"}}>
             portfolio
             </div> 
         </div>
 
-        <div className= "link-button-resume">
+        </Link>
+          
+    
+
+        <div className= "link-button-resume link-btn">
         <div style ={{ color:"burlywood" }}>
             resume
             </div>
         </div>
 
-    </div>
+        </div>
 
 
     

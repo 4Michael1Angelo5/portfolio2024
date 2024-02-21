@@ -1,98 +1,85 @@
-// -------------Cedarcreek Forestry Pictures---------
-import cc_homePage from "./images/CedarCreek/cc_homePage.png";
-import cc_aboutPage from "./images/CedarCreek/cc_aboutPage.png";
-import cc_galleryPage from "./images/CedarCreek/cc_galleryPage.png";
-import cc_storePage from "./images/CedarCreek/cc_storePage.png";
-import cc_storeCatalog_1 from "./images/CedarCreek/cc_storeCatalogPage_1.png";
-import cc_storeCatalog_2 from "./images/CedarCreek/cc_storeCatalogPage_2.png";
-import cc_storeCatalog_3 from "./images/CedarCreek/cc_storeCatalogPage_3.png";
-import cc_storeCustomOrderPage_1 from "./images/CedarCreek/cc_storeCustomOrderPage_1.png" ; 
-import cc_storeCustomOrderPage_2 from "./images/CedarCreek/cc_storeCustomOrderPage_2.png"; 
-import cc_storeCustomOrderPage_3 from "./images/CedarCreek/cc_storeCustomOrderPage_3.png"
-import cc_checkoutPage from "./images/CedarCreek/cc_checkoutPage.png";
+// ------------------Sangaku 13-----------------------
+import sangaku13 from "./images/Sangaku13/sangaku13.png"
+import SQ from './images/Sangaku13/SQ.png';
+import SANQuest from './images/Sangaku13/SQ.png';
+import pedaltrianle from './images/Sangaku13/pedaltriangle.png';
+import parobla from './images/Sangaku13/parabola.png';
+import PAbsect from './images/Sangaku13/PAbsect.png'
+import geogebra from './images/Technologies/geogebra.png'
+
+// -------------------Magic Cubes---------------------------
+
+import PerfectMagicCube5_850 from './images/MagicCubes/PerfectMagicCube5_850.svg';
+import PerfectMagicCube5Slices_850 from './images/MagicCubes/PerfectMagicCube5Slices_850.svg';
+import PerfectMagicCubeLines_950 from './images/MagicCubes/PerfectMagicCubeLines_950.svg';
+import matlab from './images/Technologies/matlab.png';
 
 
 
-//------------Paul SparksConstruction Pictures--------
-
-
-import PS_home from "./images/PaulSparks/PS_home.png";
-
-
-
-
-
-//------------Portfolio 1 Pictures -------------------
-
-import portfolio1 from'./images/Porfolio1/portfolio1.png';
-
- 
-
-
-
-
-export const projectsInfo = [
+export const projectsInfo= [
     {
-    title: "Cedarcreek Forestry",
-    image:   cc_homePage ,
-    projectOverview: [
-        {title:"Home Page", image: cc_homePage} ,
-        {title:"About Page", image:cc_aboutPage} , 
-        {title:"Galery Page", image: cc_galleryPage} , 
-        {title:"Store Page", image: cc_storePage} , 
-        {title:"Store Page Catalog", image: cc_storeCatalog_1} ,
-        {title:"Store Page Catalog", image: cc_storeCatalog_2} ,
-        {title:"Store Page", image: cc_storeCatalog_3} ,
-        {title:"Custom Order Page", image: cc_storeCustomOrderPage_1} , 
-        {title:"Custom Order Page", image: cc_storeCustomOrderPage_2} ,
-        {title:"Custom Order Page", image: cc_storeCustomOrderPage_3} ,
-        {title:"Checkout Page", image: cc_checkoutPage},
-
+        title: "Sankagu 13",
+        image:   sangaku13 ,
+        projectOverview: [
+            {title:"Home Page", image: sangaku13 , description: "I'm baby sartorial prism tofu polaroid, sriracha \
+            selfies poke quinoa neutra cronut ugh adaptogen. Leggings ugh vegan \
+            tattooed, kickstarter irony Brooklyn meh readymade four dollar toast \
+            woke tonx bicycle rights."} ,
+            {title:"About Page", image:SQ , description: "I'm baby sartorial prism tofu polaroid, sriracha \
+            selfies poke quinoa neutra cronut ugh adaptogen. Leggings ugh vegan \
+            tattooed, kickstarter irony Brooklyn meh readymade four dollar toast \
+            woke tonx bicycle rights."} , 
+            {title:"Gallery Page", image:  SANQuest , description:"I'm baby sartorial prism tofu polaroid, sriracha \
+            selfies poke quinoa neutra cronut ugh adaptogen. Leggings ugh vegan \
+            tattooed, kickstarter irony Brooklyn meh readymade four dollar toast \
+            woke tonx bicycle rights."} , 
+            {title:"Store Page", image:  pedaltrianle} , 
+            {title:"Store Page Catalog", image:parobla, description: "I'm baby sartorial prism tofu polaroid, sriracha \
+            selfies poke quinoa neutra cronut ugh adaptogen. Leggings ugh vegan \
+            tattooed, kickstarter irony Brooklyn meh readymade four dollar toast \
+            woke tonx bicycle rights."} ,
+            {title:"Store Page Catalog", image: PAbsect, description: "I'm baby sartorial prism tofu polaroid, sriracha \
+            selfies poke quinoa neutra cronut ugh adaptogen. Leggings ugh vegan \
+            tattooed, kickstarter irony Brooklyn meh readymade four dollar toast \
+            woke tonx bicycle rights."} ,
+           
+            ],
+        technologies:[
+            {title : "React", image: geogebra},
         ],
-    description: "I'm baby sartorial prism tofu polaroid, sriracha \
-    selfies poke quinoa neutra cronut ugh adaptogen. Leggings ugh vegan \
-    tattooed, kickstarter irony Brooklyn meh readymade four dollar toast \
-    woke tonx bicycle rights.",
-    link:"https://4michael1angelo5.github.io/furn-future/"
-    
-    },
-    {
-
-    title: "Paul Sparks Construction",
-    image: PS_home ,
-    projectOverview: [
-        {title:"string", image: cc_homePage} ,
-        {title:"string", image: cc_homePage} , 
-        {title:"string", image: cc_homePage} , 
-        {title:"string", image: cc_homePage} , 
-        {title:"string", image: cc_homePage} ,       
-        ],
-    description: "I'm baby sartorial prism tofu polaroid, sriracha \
-    selfies poke quinoa neutra cronut ugh adaptogen. Leggings ugh vegan \
-    tattooed, kickstarter irony Brooklyn meh readymade four dollar toast \
-    woke tonx bicycle rights.",
-    link:"https://4michael1angelo5.github.io/furn-future/"
-    
-    },
-    {
-
-    title: "Paul Sparks Construction",
-    image: portfolio1 ,
-    projectOverview: [
-        {title:"string", image: cc_homePage} ,
-        {title:"string", image: cc_homePage} , 
-        {title:"string", image: cc_homePage} , 
-        {title:"string", image: cc_homePage} , 
-        {title:"string", image: cc_homePage} ,       
-        ],
-    description: "I'm baby sartorial prism tofu polaroid, sriracha \
-    selfies poke quinoa neutra cronut ugh adaptogen. Leggings ugh vegan \
-    tattooed, kickstarter irony Brooklyn meh readymade four dollar toast \
-    woke tonx bicycle rights.",
-    link:"https://4michael1angelo5.github.io/furn-future/"
-    
-    }
+        description: "I'm baby sartorial prism tofu polaroid, sriracha \
+        selfies poke quinoa neutra cronut ugh adaptogen. Leggings ugh vegan \
+        tattooed, kickstarter irony Brooklyn meh readymade four dollar toast \
+        woke tonx bicycle rights.",
+        link:"https://www.geogebra.org/classic/mu5apjwb"
         
+    },
+    {
+        title: "Magic Cubes",
+        image:   PerfectMagicCube5_850 ,
+        projectOverview: [
+            {title:"Home Page", image: PerfectMagicCube5_850, description: "I'm baby sartorial prism tofu polaroid, sriracha \
+            selfies poke quinoa neutra cronut ugh adaptogen. Leggings ugh vegan \
+            tattooed, kickstarter irony Brooklyn meh readymade four dollar toast \
+            woke tonx bicycle rights."} ,
+            {title:"About Page", image:PerfectMagicCube5Slices_850 , description: "I'm baby sartorial prism tofu polaroid, sriracha \
+            selfies poke quinoa neutra cronut ugh adaptogen. Leggings ugh vegan \
+            tattooed, kickstarter irony Brooklyn meh readymade four dollar toast \
+            woke tonx bicycle rights."} , 
+            {title:"Gallery Page", image:  PerfectMagicCubeLines_950, description: "I'm baby sartorial prism tofu polaroid, sriracha \
+            selfies poke quinoa neutra cronut ugh adaptogen. Leggings ugh vegan \
+            tattooed, kickstarter irony Brooklyn meh readymade four dollar toast \
+            woke tonx bicycle rights."} ,            
+            ],
+        technologies:[
+            {title : "React", image: matlab},
+        ],
+        description: "I'm baby sartorial prism tofu polaroid, sriracha \
+        selfies poke quinoa neutra cronut ugh adaptogen. Leggings ugh vegan \
+        tattooed, kickstarter irony Brooklyn meh readymade four dollar toast \
+        woke tonx bicycle rights.",
+        link:"https://4michael1angelo5.github.io/furn-future/"
+        
+    }
     
-];
-
+]

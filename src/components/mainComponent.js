@@ -1,11 +1,14 @@
 import React, { Component } from 'react'; 
 import Header  from './headerComponent';
 import LandingPage from './landingPage';
-import Projects from './projectsComponent';
 import {Routes, Route} from 'react-router-dom'; 
 import BurgerMenu from './menuComponent';
-import {projectsInfo} from "../assets/ProjectsContent";
-import ProjectOverview from './projectOverviewComponent';
+import {portfolioInfo} from "../assets/PortfolioContent";
+import PortfolioOverview from './portfolioOverviewComponent';
+import Portfolio from './portfolioComponent';
+import ProjectsOverview from './projectsOverviewComponent';
+import Projects from './projectsComponent';
+import { projectsInfo } from '../assets/ProjectsContent';
 
  
 class Main extends React.Component{
@@ -13,17 +16,12 @@ class Main extends React.Component{
   constructor(props){
     super(props)
     this.state = {
+      portfolio: portfolioInfo,
       projects: projectsInfo,
        
     }
    
     
-  }
-
- 
-
-  componentDidUpdate(){
-    console.log(this.state.selectedProject    )
   }
 
 
@@ -41,18 +39,25 @@ class Main extends React.Component{
 
                 <Route path = '/' element={<LandingPage/>}/>
 
-                <Route path="/projects" element={<Projects projects = {this.state.projects} />} />
+                <Route path = '/projects' element = {<Projects projects = {this.state.projects}/>}/>
+                
+                {/* <Route path ='/projects/geogebra' element = {<ProjectsOverview/>}/> */}
+
+                
+
+                <Route path="/portfolio" element={<Portfolio projects = {this.state.portfolio} />} />              
+           
 
                 {
-                this.state.projects.map( (item,index)=>{
+                this.state.portfolio.map( (item,index)=>{
 
              return(
 
                
                       <Route  
                               key = {index} 
-                              path= { "/projects/" + item.title.replace(/\s/g, '')} 
-                              element = {<ProjectOverview  project = {item}/>
+                              path= { "/portfolio/" + item.title.replace(/\s/g, '')} 
+                              element = {<PortfolioOverview  project = {item}/>
                                         }
                       />
 
@@ -63,12 +68,27 @@ class Main extends React.Component{
                  })
 
                 } 
-   
-                
-                 
 
+{
+                this.state.projects.map( (item,index)=>{
 
+             return(
 
+               
+                      <Route  
+                              key = {index} 
+                              path= { "/projects/" + item.title.replace(/\s/g, '')} 
+                              element = {<ProjectsOverview  project = {item}/>
+                                        }
+                      />
+
+                        
+
+                    );
+
+                 })
+
+                } 
               </Routes>
             </div>
             
