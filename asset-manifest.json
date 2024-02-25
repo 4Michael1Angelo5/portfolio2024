@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio2024/static/css/main.f1342d84.css",
-    "main.js": "/portfolio2024/static/js/main.25140803.js",
+    "main.css": "/portfolio2024/static/css/main.4704a9f2.css",
+    "main.js": "/portfolio2024/static/js/main.e9004161.js",
     "static/js/592.6d7de513.chunk.js": "/portfolio2024/static/js/592.6d7de513.chunk.js",
     "static/media/cc_galleryPage.png": "/portfolio2024/static/media/cc_galleryPage.b3040068000c28ed531c.png",
     "static/media/cc_homePage.png": "/portfolio2024/static/media/cc_homePage.59ff118fa615d78eeb97.png",
@@ -17,13 +17,16 @@
     "static/media/cc_aboutPage.png": "/portfolio2024/static/media/cc_aboutPage.ef733c323eb90c0585b8.png",
     "static/media/ps_projectsPage.png": "/portfolio2024/static/media/ps_projectsPage.261e8f1df29fbfb68a00.png",
     "static/media/cc_storeCustomOrderPage_2.png": "/portfolio2024/static/media/cc_storeCustomOrderPage_2.6e24d410cc745bb0c814.png",
+    "static/media/notebook.jpg": "/portfolio2024/static/media/notebook.3fbb98096fb11825ac53.jpg",
     "static/media/ps_servicesPage.png": "/portfolio2024/static/media/ps_servicesPage.41599a768bcfcc8e3cc3.png",
     "static/media/cc_storeCustomOrderPage_1.png": "/portfolio2024/static/media/cc_storeCustomOrderPage_1.1903dfa9b7bc14c11373.png",
+    "static/media/sangaku.mp4": "/portfolio2024/static/media/sangaku.71cc776485d61f989f91.mp4",
     "static/media/portfolio1_projectDetailPage.png": "/portfolio2024/static/media/portfolio1_projectDetailPage.9c8eb1d0326fbb9ce0e1.png",
     "static/media/cc_storeCatalogPage_3.png": "/portfolio2024/static/media/cc_storeCatalogPage_3.0a372cc62ccc92a66eb7.png",
     "static/media/cc_checkoutPage.png": "/portfolio2024/static/media/cc_checkoutPage.92833dc1505c5d3897db.png",
     "static/media/cc_storeCatalogPage_2.png": "/portfolio2024/static/media/cc_storeCatalogPage_2.d241aa3514da03149a1d.png",
     "static/media/sangaku13.png": "/portfolio2024/static/media/sangaku13.4504ef348e4249489d69.png",
+    "static/media/OpenSans-VariableFont_wdth,wght.ttf": "/portfolio2024/static/media/OpenSans-VariableFont_wdth,wght.19ba637387f1d6142f55.ttf",
     "static/media/cc_mobile_galleryPage.jpg": "/portfolio2024/static/media/cc_mobile_galleryPage.a4db24fb6f962494b5bd.jpg",
     "static/media/ps_testimonialsPage.png": "/portfolio2024/static/media/ps_testimonialsPage.ea554c7e29ec6b7e8d9f.png",
     "static/media/cc_mobile_landingPage.jpg": "/portfolio2024/static/media/cc_mobile_landingPage.bc85693240fdc4318b82.jpg",
@@ -62,17 +65,18 @@
     "static/media/react_router.png": "/portfolio2024/static/media/react_router.75ea61c381e60e5449f5.png",
     "static/media/woo.png": "/portfolio2024/static/media/woo.5cb2c333386eadee7183.png",
     "static/media/PerfectMagicCubeLines_950.svg": "/portfolio2024/static/media/PerfectMagicCubeLines_950.883f2fc8c89eddce773dbe03d0cacb9a.svg",
+    "static/media/space-age.ttf": "/portfolio2024/static/media/space-age.1ad6f4f0cb975b88b5b9.ttf",
     "static/media/apollo.png": "/portfolio2024/static/media/apollo.89f2aa0996b972f37d05.png",
     "static/media/javascript.png": "/portfolio2024/static/media/javascript.062825dbceed44567e91.png",
     "static/media/wordpress.png": "/portfolio2024/static/media/wordpress.11ed091523e3152b651f.png",
     "static/media/reactbootstrap.png": "/portfolio2024/static/media/reactbootstrap.efdec1327625a824a51e.png",
     "index.html": "/portfolio2024/index.html",
-    "main.f1342d84.css.map": "/portfolio2024/static/css/main.f1342d84.css.map",
-    "main.25140803.js.map": "/portfolio2024/static/js/main.25140803.js.map",
+    "main.4704a9f2.css.map": "/portfolio2024/static/css/main.4704a9f2.css.map",
+    "main.e9004161.js.map": "/portfolio2024/static/js/main.e9004161.js.map",
     "592.6d7de513.chunk.js.map": "/portfolio2024/static/js/592.6d7de513.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1342d84.css",
-    "static/js/main.25140803.js"
+    "static/css/main.4704a9f2.css",
+    "static/js/main.e9004161.js"
   ]
 }
