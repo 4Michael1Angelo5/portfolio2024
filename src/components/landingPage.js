@@ -24,10 +24,17 @@ class LandingPage extends React.Component{
 
                     <h1>Hello</h1>
 
-                    <h2>my name is Chris Chun</h2>
+                    <h2>my name is <em> Chris Chun</em>
+                        </h2>
 
-                    <p> 
-                        I am a full-stack webdeveloper & full-time dad. 
+                    <p className = "mb-0"> 
+                        I am a <u> full-stack  </u> 
+                        </p>
+                        <p className = "emph"> 
+                        web developer
+                        </p>
+                        <p>
+                         & full-time dad. 
                         I create simple immersive webapps with performant code. 
                         Check out my latest work
                     </p>
@@ -45,7 +52,7 @@ class LandingPage extends React.Component{
 
     <div className = "d-flex container justify-content-center button-group">
 
-        <Link to = {"/projects"}
+        <Link to = {"/resume"}
                 style= {{
                     color:  "rgb(55 46 53) " ,
                     textDecoration: "none"
@@ -54,7 +61,7 @@ class LandingPage extends React.Component{
             <div className= "link-button-projects link-btn"> 
 
                 <div style ={{ color:"burlywood"}}>
-                projects
+                resume
                 </div>
 
             </div>
@@ -62,7 +69,7 @@ class LandingPage extends React.Component{
         </Link>
 
         
-        <Link to = {"/portfolio"}
+        <Link to = {"/projects"}
         style= {{
             color:  "rgb(55 46 53) " ,
             textDecoration: "none"
@@ -70,20 +77,26 @@ class LandingPage extends React.Component{
         
         <div className= "link-button-portfolio link-btn">
             <div style ={{ color:"burlywood"}}>
-            portfolio
+                
+            projects
             </div> 
         </div>
 
         </Link>
           
     
-
+       <Link to = {"/portfolio"}
+        style= {{
+            color:  "rgb(55 46 53) " ,
+            textDecoration: "none"
+            }}>
         <div className= "link-button-resume link-btn">
         <div style ={{ color:"burlywood" }}>
-            resume
+            
+            portfolio
             </div>
         </div>
-
+        </Link>
         </div>
 
 

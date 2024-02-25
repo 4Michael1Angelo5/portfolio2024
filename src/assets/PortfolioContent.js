@@ -113,10 +113,17 @@ export const portfolioInfo = [
         {title: "WooCommerce API", image: woo},
         {title: "React Router", image: react_router}
     ],
-    description: "I'm baby sartorial prism tofu polaroid, sriracha \
-    selfies poke quinoa neutra cronut ugh adaptogen. Leggings ugh vegan \
-    tattooed, kickstarter irony Brooklyn meh readymade four dollar toast \
-    woke tonx bicycle rights.",
+    shortDescription:"Cedarcreek Forestry LLC is a furniture company that specializes in custom live edge furniture."
+    ,
+    description: "This is the most complex website I have built. \
+    It was designed to be a single-page application. Components are \
+    conditionally rendered based on user interaction within the app.  \
+    It is a headless WordPress site with a React front-end. It \
+    leverages WordPress exclusively as a CMS to manage product orders\
+     and inventory in WooCommerece and has a custom checkout flow managed \
+     by stripe.js API. It utilizes GraphQL and Appolo Client to handle \
+     server requests to WordPress on the backend. This website required a \
+     comprehensive understanding of both front-end and back-end features.  ",
     link:"https://4michael1angelo5.github.io/furn-future/"
     
     },
@@ -145,10 +152,13 @@ export const portfolioInfo = [
     technologies:[
         {title: "Wix" , image: wix}
     ],
-    description: "I'm baby sartorial prism tofu polaroid, sriracha \
-    selfies poke quinoa neutra cronut ugh adaptogen. Leggings ugh vegan \
-    tattooed, kickstarter irony Brooklyn meh readymade four dollar toast \
-    woke tonx bicycle rights.",
+    shortDescription:"Paul Sparks Construction is a general contracting company based in Tacoma, WA."
+    ,
+    description: "The purpose of the site was to create an online presence \
+    for the small business owner for him to grow his business. The client \
+    wanted a basic, simple, and clean design layout. The website was made \
+    with Wix and I was retained under his employment to manage customer bid \
+    requests and compensated 10% on successful bids.   ",
     link:"https://4michael1angelo5.wixsite.com/paulsparksconstructi"
     
     },
@@ -176,10 +186,16 @@ export const portfolioInfo = [
         {title: "Java Script", image: javascript},
         {title: "Node.js", image : node}
     ],
-    description: "I'm baby sartorial prism tofu polaroid, sriracha \
-    selfies poke quinoa neutra cronut ugh adaptogen. Leggings ugh vegan \
-    tattooed, kickstarter irony Brooklyn meh readymade four dollar toast \
-    woke tonx bicycle rights.",
+    shortDescription:"This was my first portfolio website"
+    ,
+    description: "This was my first portfolio website. The design \
+    concept is based on a 3-dimensional Instagram page where each\
+     photo is the front face of a cube, whose perspective changes as\
+      the user scrolls. Design inspiration came from Marvel’s Ironman \
+      Jarvis UI and my affinity for cyber-punk aesthetics. This website \
+      showcases fairly complicated javascript that leverages mathematics \
+      to render a 3-dimensional perspective of each cube. It was very \
+      fun to make and I especially enjoyed the math element to the design. ",
     link:"https://4michael1angelo5.github.io/portfolio/"
     
     }

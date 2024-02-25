@@ -71,7 +71,16 @@ class Header extends React.Component{
                       color:"blanchedalmond",
                       textDecoration: "none"
                     }} >
+
+                      <Link to = {"/resume"}
+                      style= {{
+                      color:  "blanchedalmond" ,
+                      textDecoration: "none"
+                      }}>
                         resume
+                        </Link>
+
+
                     </div>
  
                     <div className = "col d-none d-lg-block nav-btn">

@@ -19,16 +19,33 @@
   font-family: cut-out;
   src: url(shared/fonts/lulo-clean-cufonfonts/Yellow\ Design\ Studio\ -\ Lulo\ Clean\ Outline\ Bold.otf);
  }
+
+ @font-face {
+  font-family: space-age;
+  src: url(shared/fonts/space-age/space-age.ttf);
+ }
+
+ @font-face{
+  font-family: open-sans;
+  src: url(shared//fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf)
+ }
  
  .App{
 
-  min-height: calc(100svh + 120px);
+  /* min-height: calc(100svh + 120px); */
   width: 100dvw;  
-  background-image: url('./assets/images/image.png'),linear-gradient(160deg, rgba(65, 89, 208, 1) 0%, rgba(200, 80, 192, 1) 83%, rgba(205, 176, 54, .82)  100%);
+  background-image: url('./assets/images/image.png'),linear-gradient(160deg, rgba(65, 89, 208, 1) 0%, rgba(200, 80, 192, 1) 83%, rgb(205 104 54)  100%);
   background-position: 78% 0%;
   background-repeat: repeat-y;
   background-blend-mode: luminosity;
+  background-attachment: fixed;
+  
+   
  }
+
+ 
+  
+
 
 
 .navbar{
@@ -47,16 +64,18 @@
 .landing-page h1{
   font-family: cut-out;
   font-size: 3.5rem;
-  padding: 1rem 2rem 0rem 2rem;
+  padding:  1rem 1rem 0rem ;
   color: blanchedalmond ;
+  translate: 7px;
 }
 .landing-page h2{
-  padding: 0.5rem;
+  padding: 0rem 0.5rem 0.5rem;
   color: antiquewhite;
   font-family: blogger;
+  margin-bottom: 0px;
 }
 .landing-page p{
-  font-family: sans-serif; 
+  font-family: open-sans; 
   font-size: 18px;
   padding-left: 2rem;
   padding-right:2rem;
@@ -65,17 +84,24 @@
 
 .landing-page {
   width: 100%;
-    height: 100%;
+  min-height: 950px;
 }
 
 .landing-page .k1{
 
-  margin: 20svh auto; 
+  margin: 160px  auto 50px; 
   outline-style: solid;
   background: #19162d5c;
   flex-direction: column;
   border-radius: 42px;
   box-shadow: 5px 10px;
+}
+
+.landing-page  .emph{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'cut-out';
+  font-size: 30px;
 }
 
 /* ------------------------------  Beer me switch -----------------------------*/
@@ -222,7 +248,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .projects-main-image{
 
-  border: 2px solid #1fa8dc;
+  border: 2px solid aliceblue;
   border-radius: 12px;
 
 }
@@ -247,6 +273,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   font-size: larger;
   font-family: sans-serif;
   color: aliceblue ; 
+  backdrop-filter: blur(1px);
 }
 
  
@@ -332,12 +359,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 
-.button-group{
-      /* position: absolute; */
-      margin: -14vh;
-         
-     
-}
+/* .button-group{
+  
+  margin: -14vh;
+             
+} */
 
 .link-button-resume:hover{
 
@@ -379,3 +405,43 @@ Note: Beware of modifying this element as it can break the animations - you shou
   font-size: 18px;
 }
  
+
+
+/* -------------------------resume -----------------------------*/
+
+.resume-container {
+  background-color: #faebd7c7;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+.resume-container h1{
+  font-family: open-sans;
+}
+
+.resume-container h3{
+  font-family: space-age;
+  color: #654a21;
+  border-bottom: 2px solid;
+  width: fit-content;
+  border-image: linear-gradient(90deg, #673AB7, #E91E63) 30;
+  font-size: 18px;
+
+}
+
+.resume-container h2{ 
+ font-size: calc(1.05rem + .9vw);
+ font-family: open-sans;
+}
+
+.resume-container header{
+  font-style: italic;
+  font-weight:200 ; 
+  font-size: 12px;
+}
+
+.footer{
+  margin-top:60px;
+  width:100vw;
+  height: 80px; 
+  background-color: #29283085; ;
+}

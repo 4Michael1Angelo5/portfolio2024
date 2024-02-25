@@ -56,8 +56,9 @@ class Portfolio extends React.Component{
                             <div  className=' col-lg-6 col-sm-12 pb-2 '>
         
                                 <h2 className = 'projects-title'> {item.title} </h2>
-                                <p className = "d-none d-md-block d-lg-block projects-page-p">
-                                    {item.description}
+                                {/* <p className = "d-none d-md-block d-lg-block projects-page-p"> */}
+                                <p className = "  projects-page-p">
+                                    {item.shortDescription}
                                 </p>
                                 
                             </div>

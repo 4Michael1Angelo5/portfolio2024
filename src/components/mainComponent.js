@@ -9,7 +9,8 @@ import Portfolio from './portfolioComponent';
 import ProjectsOverview from './projectsOverviewComponent';
 import Projects from './projectsComponent';
 import { projectsInfo } from '../assets/ProjectsContent';
-
+import Resume from './resumeComponent';
+import Footer from './footerComponent';
  
 class Main extends React.Component{
 
@@ -24,12 +25,16 @@ class Main extends React.Component{
     
   }
 
+  
+
 
     render(){
 
+         
+
 
         return(
-            <div>
+            <React.Fragment>
 
               <BurgerMenu/>
               
@@ -39,11 +44,10 @@ class Main extends React.Component{
 
                 <Route path = '/' element={<LandingPage/>}/>
 
-                <Route path = '/projects' element = {<Projects projects = {this.state.projects}/>}/>
-                
-                {/* <Route path ='/projects/geogebra' element = {<ProjectsOverview/>}/> */}
+                <Route path = '/resume' element = {<Resume /> }/>
 
-                
+                <Route path = '/projects' element = {<Projects projects = {this.state.projects}/>}/>
+              
 
                 <Route path="/portfolio" element={<Portfolio projects = {this.state.portfolio} />} />              
            
@@ -90,7 +94,8 @@ class Main extends React.Component{
 
                 } 
               </Routes>
-            </div>
+              <Footer/>
+            </React.Fragment>
             
          
     )};

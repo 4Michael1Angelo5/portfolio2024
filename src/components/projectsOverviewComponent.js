@@ -1,17 +1,14 @@
-import React  from 'react';
+
+import React   from 'react';
+import sangaku from '../assets/images/sangaku.mp4' ;
 
  
 class ProjectsOverview extends React.Component{
-    constructor(props){
-        super(props)
-
-    }
-
-render(){
+ 
+  render(){
 
     let project = this.props.project; 
     let content = this.props.project.projectOverview;
-    
 
 
     return(
@@ -25,10 +22,20 @@ render(){
 
                     <h1 className = "projects-page-h1-title">{project.title}</h1>
 
-                    <p className = " projects-page-p"> {project.description}</p>
+                    <p className = " projects-page-p"> { project.description}</p>
 
                     <div className = "d-flex justify-content-end project-link-chill-vibes pb-2">
-                       <a  href={ `${project.link}` }> visit site </a>
+
+                      {project.title === "Magic Cubes"?
+
+                      null
+                      :
+                      
+                      <a  href={ `${project.link}` }> visit site </a>
+                      }
+
+                       
+
                     </div>
 
                     <h3 className = "tech-title">Technologies</h3> 
@@ -47,6 +54,7 @@ render(){
                                         maxWidth: "32px",                                                                       
                                       borderRadius: "100%"}}
                                        />
+
                             </div>
                             
                           )
@@ -55,19 +63,21 @@ render(){
                     </div>
                     </div>
                 </div>
+         
+                <div className = "row d-flex justify-content-center pt-4">
 
-                <div className = "row pt-4">
+                
 
                     {
                         content.map( (content,index) => {
                        return(
 
                              
-                        <div key = {index} className = "col-12 pb-4"> 
+                        <div key = {index} className = "col-12 col-md-8 col-lg-8 pb-4"> 
 
                         <h2 className = "projects-title mb-3"  >{content.title}</h2>
                         <p className = "projects-page-p"> {content.description}</p>
-
+ 
                         <img 
                              className='projects-main-image'
                             src = {content.image}
@@ -84,8 +94,20 @@ render(){
 
                         })
                     }
+                       
+
                      
                 </div>
+                {   project.title==="Sangaku 13" 
+                        ? 
+                        <div className = "container">
+                        <p className={"projects-page-p"}> Now for some fun animations!</p>
+
+                       <video className = " mt-3 projects-main-image" src = {sangaku} autoPlay playsInline   type = "video/mp4" loop  
+                       style= {{marginLeft: "0px" , marginRight: "0px", width: "100%"}}/>
+                       </div>
+                        :
+                        null}
 
             </div>
 

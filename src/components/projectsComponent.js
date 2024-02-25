@@ -74,6 +74,7 @@ class Projects extends React.Component{
 
                                     style = {{
                                                 width : "100%",
+                                                backgroundColor: "rgba(25, 22, 45, 0.36)"
                                                                                         
                                             }}
                                     />
