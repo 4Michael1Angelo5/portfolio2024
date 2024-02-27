@@ -20,7 +20,7 @@ class LandingPage extends React.Component{
             <div className = "col">
 
 
-                <div className = '  k1 d-flex flex-column text-center'>
+                <div className = 'welcome-tab d-flex flex-column text-center'>
 
                     <h1>Hello</h1>
 

@@ -31,21 +31,15 @@
  }
  
  .App{
-
-  /* min-height: calc(100svh + 120px); */
   width: 100dvw;  
   background-image: url('./assets/images/image.png'),linear-gradient(160deg, rgba(65, 89, 208, 1) 0%, rgba(200, 80, 192, 1) 83%, rgb(205 104 54)  100%);
   background-position: 78% 0%;
   background-repeat: repeat-y;
   background-blend-mode: luminosity;
   background-attachment: fixed;
-  
-   
  }
 
  
-  
-
 
 
 .navbar{
@@ -87,7 +81,7 @@
   min-height: 950px;
 }
 
-.landing-page .k1{
+.landing-page .welcome-tab{
 
   margin: 160px  auto 50px; 
   outline-style: solid;
@@ -238,6 +232,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
     text-decoration: none;
 }
 
+.bm-item:hover{
+  cursor: pointer;
+}
+
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
@@ -273,7 +271,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   font-size: larger;
   font-family: sans-serif;
   color: aliceblue ; 
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(4px);
 }
 
  
@@ -281,25 +279,27 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .project-link-chill-vibes a {
 
-  width : 78px ;
-  height:25px ; 
-  color: burlywood;
-  /* background-color: 6612b3 ;  */
-  border: 1px solid rgb(213, 185, 148)  ; 
-  border-radius: 12px;
+  position: relative;
+  left: 10px;
+  width : 75px ; 
+  height: 75px ; 
+  border: 1px solid black ;  
+  border-radius:  100%;
+  background-color:  #19162d5c;
   text-align: center;
+  padding : 26px 6px;
+  box-shadow: 2.5px 5px black;
   text-decoration: none;
+  color: burlywood;
 
 }
 
 
 .project-link-chill-vibes a:hover {
 
-  cursor: pointer; 
-  color: rgb(216, 159, 83);
-  background-color: rgb(121 50 186); ; 
-  border: 1px solid rgb(213, 185, 148)  ; 
- 
+  cursor: pointer;
+  background: radial-gradient(circle at 100px 100px, #1310e6d9 0%, #a61c5c54 86%, #ff00008a 95%) !important ;
+
 }
 
 .border-bottom-p{
@@ -445,3 +445,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
   height: 80px; 
   background-color: #29283085; ;
 }
+
+.footer a {
+  color: blanchedalmond ;
+  text-decoration: none; 
+}
+
+.footer{
+  color:blanchedalmond;
+}
+ 

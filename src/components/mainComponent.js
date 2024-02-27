@@ -19,10 +19,16 @@ class Main extends React.Component{
     this.state = {
       portfolio: portfolioInfo,
       projects: projectsInfo,
+      beerMe: false
        
     }
-   
+    this.toggleBeerMe = this.toggleBeerMe.bind(this)
     
+  }
+
+  toggleBeerMe = (e) =>{
+    // e.prevenetDefault()
+    this.setState({beerMe:!this.state.beerMe})
   }
 
   
@@ -38,7 +44,7 @@ class Main extends React.Component{
 
               <BurgerMenu/>
               
-              <Header/>
+              <Header beerMe= {this.state.beerMe} toggleBeerMe = {this.toggleBeerMe}/>
 
               <Routes>
 

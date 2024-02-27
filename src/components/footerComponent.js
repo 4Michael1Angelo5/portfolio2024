@@ -20,11 +20,11 @@ class Footer extends React.Component{
 
                         </div>
 
-                        <div className = "col-3">
+                        <div className = "col-3 d-flex justify-content-center ">
 
                         <a href = "https://github.com/4michael1Angelo5">
 
-                            GitHub 
+                            GitHub: <br/>
                         
                           <img src = {gitHub}
                           style = {{
@@ -36,11 +36,11 @@ class Footer extends React.Component{
 
                         </div>
 
-                        <div className = "col-3">
+                        <div className = "col-3 d-flex justify-content-center">
 
                         
                         <a href = "mailto: 4michael1angelo5@gmail.com"> 
-                        Email:
+                        Email: <br/>
                         <img src = {email}
                           style = {{
                             width: "30px"

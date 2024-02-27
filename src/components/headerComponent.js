@@ -3,7 +3,7 @@ import  {Navbar} from 'reactstrap';
 import {Link } from 'react-router-dom';
 
 
-const Switch = () => {
+const Switch = (props) => {
     return (
       <>
         <input
@@ -15,7 +15,9 @@ const Switch = () => {
           className="react-switch-label"
           htmlFor={`react-switch-new`}
         >
-          <span className={`react-switch-button`} />
+          <span className={`react-switch-button`}
+          onClick = {props.toggleBeerMe}          
+          />
         </label>
 
         
@@ -25,6 +27,12 @@ const Switch = () => {
 
  
 class Header extends React.Component{
+  
+
+  componentDidMount(){
+    console.log(this.props)
+  }
+
     render(){
         return(
 
@@ -83,9 +91,9 @@ class Header extends React.Component{
 
                     </div>
  
-                    <div className = "col d-none d-lg-block nav-btn">
-                        <Switch/>
-                    </div>
+                    {/* <div className = "col d-none d-lg-block nav-btn">
+                        <Switch toggleBeerMe = {this.props.toggleBeerMe}/>
+                    </div> */}
 
                     
 

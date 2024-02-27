@@ -1,7 +1,24 @@
 import React from 'react'
 import {bubble as Menu} from 'react-burger-menu';
-import { Link, Routes,Route } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import icon from '../assets/images/logo.png'
+
+ function MenuLink(props) {
+
+  let navigate = useNavigate();
+ const followLink = (e)=>{
+  e.preventDefault()
+  props.toggle(e)
+  navigate("/" + props.target)
+ }
+ 
+
+return (
+  <div className = "bm-item menu-item" onClick={e=>followLink(e)}>
+    {props.target.length == 0 ? "home" : props.target}      
+  </div>
+)
+}
 
  
 
@@ -17,29 +34,40 @@ class BurgerMenu extends React.Component{
     this.toggle = this.toggle.bind(this); 
   }
 
+ 
+
 
   toggle=(e)=> {
     e.preventDefault();
-    this.setState({open:!this.state})
+    this.setState({open:false})
     }
-
 
     showSetting(event){
       event.preventDefault();
     }
+
+    handleStateChange (state) {
+      this.setState({open: state.open})  
+    }
     render(){
+
+  
+
       return(
-       <Menu   customBurgerIcon = {<img src={icon} /> } right>
+       <Menu isOpen = {this.state.open} customBurgerIcon = {<img src={icon} /> } 
+            right onStateChange={(state) => this.handleStateChange(state)}
+            >
 
 
-            <Link id="home" className="menu-item" to='/'   >Home</Link> 
 
-          <Link id="portfolio" className="menu-item" to='/portfolio' >Portfolio</Link>
+          <MenuLink target = {""} toggle ={e=>this.toggle(e)}/>
 
-          <Link id="projects" className="menu-item" to='/projects'>  Projects </Link>
+          <MenuLink target = {"portfolio"} toggle ={e=>this.toggle(e)}/>
 
-          <Link id = "resume" className = 'menu-item' to = '/resume'> Resume </Link>
+          <MenuLink target = {"projects"} toggle ={e=>this.toggle(e)}/>
 
+          <MenuLink target = {"resume"} toggle ={e=>this.toggle(e)}/>
+         
 
       </Menu>
 

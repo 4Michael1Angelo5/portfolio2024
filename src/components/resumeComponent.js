@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container } from 'reactstrap';
+import resume from '../assets/images/icons/resume.png'
+ 
 
 
 class Resume extends React.Component{
@@ -64,14 +66,24 @@ class Resume extends React.Component{
                         <h2>NuCamp Coding Boot Camp, Tacoma - <em>Student</em></h2>
                         <header>2018-2019</header>
                         <p>Completed Full Stack Web Developer Boot Camp and learned coding 
-                            fundamentals of HTML, Javascript, CSS, Sass, and git.Bootstrap, 
+                            fundamentals of HTML, Javascript, CSS, Sass, git, Bootstrap, 
                             Javascript, React, React Native, MongoDB,
+                        </p>
+
+
+                        <h2>Cider and Cedar, Tacoma - <em>Chef</em></h2>
+                        <header>2022-2024</header>
+                        <p>Head Chef at Cider and Cedar, cider taproom. Create menu, manage 
+                            inventory, schedule, create specials, cook, clean, and maintain 
+                            business relations with food vendors. 
                         </p>
 
                         <h3>Education</h3>
                         <h2>College of The Redwoods, Eureka CA</h2>
                         <header>2010-2012</header>
                         <p>Associate in Science - Math Major</p>
+
+                        
 
                         
 
@@ -120,6 +132,34 @@ class Resume extends React.Component{
                     </div>
 
                 </Container>
+
+                <Container>
+                    <div className = 'row'>
+                        <div className = "col d-flex justify-content-end m-2">
+                            <div className = "link-button-resume">
+
+                            
+                        <a href ={process.env.PUBLIC_URL + '/Chris Chun Resume.pdf'} download>
+                    
+                         
+                        
+                        <img  style = {{width: "50px"}} src=  {resume}/>
+
+                        </a>
+                        </div>
+
+                        </div>
+                    </div>
+                </Container>
+
+           
+
+                  
+                
+
+                   
+      
+ 
                 
             </React.Fragment>
         )
