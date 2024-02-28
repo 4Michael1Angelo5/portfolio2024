@@ -28,11 +28,7 @@ class Portfolio extends React.Component{
 
                             
                 <p className = "projects-page-p">
-                I'm baby microdosing gastropub tumblr DSA sartorial fingerstache
-                swag drinking vinegar readymade squid chambray ascot neutral milk 
-                hotel. YOLO post-ironic snackwave retro. Organic street art shoreditch 
-                shabby chic hexagon fam vaporware tumeric ramps gatekeep seitan DSA. Blue 
-                bottle retro cornhole iPhone, disrupt letterpress austin.
+                Check out my latest work.
                 </p>
               
 

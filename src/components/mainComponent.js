@@ -26,8 +26,8 @@ class Main extends React.Component{
     
   }
 
-  toggleBeerMe = (e) =>{
-    // e.prevenetDefault()
+  toggleBeerMe = () =>{
+     
     this.setState({beerMe:!this.state.beerMe})
   }
 
@@ -48,7 +48,7 @@ class Main extends React.Component{
 
               <Routes>
 
-                <Route path = '/' element={<LandingPage/>}/>
+                <Route path = '/' element={<LandingPage beerMe = {this.state.beerMe}/>}/>
 
                 <Route path = '/resume' element = {<Resume /> }/>
 

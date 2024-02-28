@@ -4,10 +4,18 @@ import { Link } from 'react-router-dom';
 
 class LandingPage extends React.Component{ 
 
+    constructor(props){
+        super(props)
+
+    }
+
+
     render(){
+
+        let beerMe = this.props.beerMe;
         return(
 
-    <div className = 'landing-page'>
+    <div className = {beerMe? "beerMe-landing-page landing-page":'landing-page'}>
 
 
         <div className = "container">
@@ -20,7 +28,7 @@ class LandingPage extends React.Component{
             <div className = "col">
 
 
-                <div className = 'welcome-tab d-flex flex-column text-center'>
+                <div className = {beerMe? 'beerMe-welcome-tab d-flex flex-column text-center' :'welcome-tab d-flex flex-column text-center'}>
 
                     <h1>Hello</h1>
 

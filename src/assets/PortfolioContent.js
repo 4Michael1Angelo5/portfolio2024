@@ -135,7 +135,7 @@ export const portfolioInfo = [
         {title:"Home Page", image: PS_home} ,
         {title:"About Page", image: ps_aboutPage} , 
         {title:"Service Page", image: ps_servicesPage} , 
-        {title: "Contact Page" , image: ps_servicesPage},
+        {title: "Contact Page" , image: ps_contactPage},
         {title:"Testimonials Page", image: ps_testimonialsPage} , 
         {title:"Projects Page", image: ps_projectsPage} ,
         {title:"Projects Page", image: ps_projectsPage_1}     

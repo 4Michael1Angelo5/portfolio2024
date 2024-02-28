@@ -12,11 +12,12 @@ const Switch = (props) => {
           type="checkbox"
         />
         <label
+          onClick = {props.toggleBeerMe} 
           className="react-switch-label"
           htmlFor={`react-switch-new`}
         >
           <span className={`react-switch-button`}
-          onClick = {props.toggleBeerMe}          
+                   
           />
         </label>
 
@@ -93,9 +94,9 @@ class Header extends React.Component{
  
                     {/* <div className = "col d-none d-lg-block nav-btn">
                         <Switch toggleBeerMe = {this.props.toggleBeerMe}/>
-                    </div> */}
+                    </div>
 
-                    
+                     */}
 
                     
 

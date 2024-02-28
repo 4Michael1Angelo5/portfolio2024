@@ -54,6 +54,8 @@
   border-left: 10px solid #DC62CD;
   
 }
+
+/* -------------------------landing page ------------------------------------*/
  
 .landing-page h1{
   font-family: cut-out;
@@ -96,6 +98,24 @@
   padding: 0px;
   font-family: 'cut-out';
   font-size: 30px;
+}
+
+
+.landing-page .beerMe-welcome-tab{
+
+  margin: 160px  auto 50px; 
+  outline-style: solid;
+  background: #19162d5c;
+  flex-direction: column;
+  border-radius: 42px;
+  box-shadow: 5px 10px;
+}
+
+.beerMe-landing-page{
+
+  background-color: #201a57;
+  
+
 }
 
 /* ------------------------------  Beer me switch -----------------------------*/
