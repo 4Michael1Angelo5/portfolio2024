@@ -4,11 +4,20 @@ import sangaku from '../assets/images/sangaku.mp4' ;
 
  
 class ProjectsOverview extends React.Component{
+
+  componentDidMount(){
+    console.log(this.props.beerMe)
+  }
+
+  componentDidUpdate(){
+    console.log(this.props.beerMe)
+  }
  
   render(){
 
     let project = this.props.project; 
     let content = this.props.project.projectOverview;
+    let beerMe = this.props.beerMe ; 
 
 
     return(
@@ -24,14 +33,22 @@ class ProjectsOverview extends React.Component{
 
                     <p className = " projects-page-p"> { project.description}</p>
 
-                    <div className = "d-flex justify-content-end project-link-chill-vibes pb-2">
+                    <div className = "d-flex justify-content-end  pb-2">
 
                       {project.title === "Magic Cubes"?
 
                       null
                       :
-                      
-                      <a  href={ `${project.link}` }> visit site </a>
+                      <a href={ `${project.link}`}
+                      className = 
+                      {   beerMe
+                          ? 
+                          "link md-btn beerMe-btn"
+                          :
+                          "link md-btn"
+                      }>                      
+                        visit site
+                      </a>
                       }
 
                        

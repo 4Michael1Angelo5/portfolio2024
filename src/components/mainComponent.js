@@ -20,15 +20,38 @@ class Main extends React.Component{
       portfolio: portfolioInfo,
       projects: projectsInfo,
       beerMe: false
+      
        
-    }
-    this.toggleBeerMe = this.toggleBeerMe.bind(this)
-    
+    }    
+    this.toggleBeerMe = this.toggleBeerMe.bind(this);
+    this.renderBeerMe = this.renderBeerMe.bind(this); 
   }
 
   toggleBeerMe = () =>{
-     
     this.setState({beerMe:!this.state.beerMe})
+  }
+
+  renderBeerMe = () =>{
+
+    
+
+
+      if (this.state.beerMe) {
+        // document.getElementsByClassName('App').
+        let appCss = document.getElementsByClassName('App') 
+        appCss[0].classList.replace("App" , "beerMe-landing-page")
+      }   
+      else {
+        let appCss = document.getElementsByClassName('beerMe-landing-page')
+        appCss[0].classList.replace("beerMe-landing-page" , "App")
+
+      }   
+    
+  }
+
+
+  componentDidUpdate(){
+    this.renderBeerMe()
   }
 
   
@@ -44,13 +67,13 @@ class Main extends React.Component{
 
               <BurgerMenu/>
               
-              <Header beerMe= {this.state.beerMe} toggleBeerMe = {this.toggleBeerMe}/>
+              <Header beerMe = {this.state.beerMe} toggleBeerMe = {this.toggleBeerMe}/>
 
               <Routes>
 
                 <Route path = '/' element={<LandingPage beerMe = {this.state.beerMe}/>}/>
 
-                <Route path = '/resume' element = {<Resume /> }/>
+                <Route path = '/resume'  element = {<Resume  beerMe ={this.state.beerMe}/> }/>
 
                 <Route path = '/projects' element = {<Projects projects = {this.state.projects}/>}/>
               
@@ -67,7 +90,7 @@ class Main extends React.Component{
                       <Route  
                               key = {index} 
                               path= { "/portfolio/" + item.title.replace(/\s/g, '')} 
-                              element = {<PortfolioOverview  project = {item}/>
+                              element = {<PortfolioOverview beerMe = {this.state.beerMe} project = {item}/>
                                         }
                       />
 
@@ -88,7 +111,7 @@ class Main extends React.Component{
                       <Route  
                               key = {index} 
                               path= { "/projects/" + item.title.replace(/\s/g, '')} 
-                              element = {<ProjectsOverview  project = {item}/>
+                              element = {<ProjectsOverview beerMe = {this.state.beerMe} project = {item}/>
                                         }
                       />
 

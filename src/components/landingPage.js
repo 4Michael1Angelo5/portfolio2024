@@ -15,7 +15,7 @@ class LandingPage extends React.Component{
         let beerMe = this.props.beerMe;
         return(
 
-    <div className = {beerMe? "beerMe-landing-page landing-page":'landing-page'}>
+    <div className =   'landing-page'>
 
 
         <div className = "container">
@@ -61,50 +61,47 @@ class LandingPage extends React.Component{
     <div className = "d-flex container justify-content-center button-group">
 
         <Link to = {"/resume"}
-                style= {{
-                    color:  "rgb(55 46 53) " ,
-                    textDecoration: "none"
-                    }}>
-
-            <div className= "link-button-projects link-btn"> 
-
-                <div style ={{ color:"burlywood"}}>
+                className = 
+                {   beerMe
+                    ? 
+                    "link sm-btn beerMe-btn"
+                    :
+                    "link sm-btn"
+                }>
                 resume
-                </div>
-
-            </div>
+        
                 
         </Link>
 
         
         <Link to = {"/projects"}
-        style= {{
-            color:  "rgb(55 46 53) " ,
-            textDecoration: "none"
-            }}>
-        
-        <div className= "link-button-portfolio link-btn">
-            <div style ={{ color:"burlywood"}}>
-                
-            projects
-            </div> 
-        </div>
+            className = 
+            {   beerMe
+                ? 
+                "link md-btn beerMe-btn"
+                :
+                "link md-btn"
+            }>
+            projects 
 
         </Link>
           
     
        <Link to = {"/portfolio"}
-        style= {{
-            color:  "rgb(55 46 53) " ,
-            textDecoration: "none"
-            }}>
-        <div className= "link-button-resume link-btn">
-        <div style ={{ color:"burlywood" }}>
-            
+            className = 
+            {   beerMe
+                ? 
+                "link lg-btn beerMe-btn"
+                :
+                "link lg-btn"
+            }
+                
+            >
+       
             portfolio
-            </div>
-        </div>
+      
         </Link>
+
         </div>
 
 

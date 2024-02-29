@@ -7,6 +7,11 @@ import resume from '../assets/images/icons/resume.png'
 class Resume extends React.Component{
 
 
+    componentDidMount(){
+        console.log(this.props.beerMe)
+    }
+
+
 
    
 
@@ -136,17 +141,25 @@ class Resume extends React.Component{
                 <Container>
                     <div className = 'row'>
                         <div className = "col d-flex justify-content-end m-2">
-                            <div className = "link-button-resume">
+                           
+                       
+                       
 
-                            
-                        <a href ={process.env.PUBLIC_URL + '/Chris Chun Resume.pdf'} download>
-                    
-                         
-                        
+                        <a href ={process.env.PUBLIC_URL + '/Chris Chun Resume.pdf'} download
+                      className = 
+                      {   this.props.beerMe
+                          ? 
+                          "link lg-btn beerMe-btn"
+                          :
+                          "link lg-btn"
+                      }> 
+
                         <img  style = {{width: "50px"}} src=  {resume}/>
+                      
+                      </a>
 
-                        </a>
-                        </div>
+
+ 
 
                         </div>
                     </div>

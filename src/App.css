@@ -34,9 +34,10 @@
   width: 100dvw;  
   background-image: url('./assets/images/image.png'),linear-gradient(160deg, rgba(65, 89, 208, 1) 0%, rgba(200, 80, 192, 1) 83%, rgb(205 104 54)  100%);
   background-position: 78% 0%;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
   background-blend-mode: luminosity;
   background-attachment: fixed;
+   
  }
 
  
@@ -104,16 +105,36 @@
 .landing-page .beerMe-welcome-tab{
 
   margin: 160px  auto 50px; 
-  outline-style: solid;
   background: #19162d5c;
-  flex-direction: column;
-  border-radius: 42px;
+  flex-direction: column; 
   box-shadow: 5px 10px;
+  border: 10px solid;
+  border-radius: 42px;
+ 
+  border: double 10px transparent;
+   
+  background-image: linear-gradient(#19162d, #19162d), linear-gradient(to right, #673AB7, #E91E63);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: border 1s ease-out;
+  
+   
+  
+  
 }
 
 .beerMe-landing-page{
+  
+ 
+  background-image: url('./assets/images/image.png'),radial-gradient(#201a57, black);
+  background-position: 78% 0%;
+  background-repeat: no-repeat;
+  background-blend-mode: color-dodge;
+  background-attachment: fixed;
 
-  background-color: #201a57;
+  
+
+   
   
 
 }
@@ -148,7 +169,8 @@
   height: 45px;
   border-radius: 45px;
   transition: 0.2s;
-  background: #ce93d8;
+  /* background: #ce93d8; */
+  background: radial-gradient(circle at 100px 100px, #1310e6d9 0%, #a61c5c54 86%, #ff00008a 95%) ;
   box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
 }
 
@@ -234,7 +256,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
    
-  fill : #d887e5
+  /* fill : #111532 ; */
+  fill: #201a57 ; 
+
 }
 
 /* Wrapper for item list */
@@ -250,6 +274,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     font-family: 'cut-out';
     font-size: 1.5rem;
     text-decoration: none;
+    line-height: 5.5rem;
 }
 
 .bm-item:hover{
@@ -314,99 +339,67 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 }
 
-
-.project-link-chill-vibes a:hover {
-
-  cursor: pointer;
-  background: radial-gradient(circle at 100px 100px, #1310e6d9 0%, #a61c5c54 86%, #ff00008a 95%) !important ;
-
-}
-
 .border-bottom-p{
   border-bottom: 2px solid;
   border-image: linear-gradient(90deg, blanchedalmond, #96c4eb) 30;
 }
 
-.link-button-projects{
+/* ------------------------link buttons------------------- */
+
+.link{
 
   position: relative;
-  left: 10px;
-  width : 75px ; 
-  height: 75px ; 
-  border: 1px solid ;  
+  border: 1px solid #212529 ;  
   border-radius:  100%;
   background-color:  #19162d5c;
   text-align: center;
-  padding : 22px 9px;
-  box-shadow: 2.5px 5px;
+  box-shadow: #212529 2.5px 5px;
   text-decoration: none;
+  color: burlywood ; 
 
- 
-}
-
-
-.link-button-portfolio{
-
-  position: relative;
-  bottom: -60px;
-  left: -7px;
-  width : 100px ; 
-  height: 100px ; 
-  border: 1px solid;
-  border-radius:  100%;
-  background-color:  #19162d5c;
-  text-align: center;
-  padding : 29px 0px;
-  box-shadow: 5px 10px;
-  display:table-cell;
 
 }
 
-
-.link-button-resume{
-  position: relative;
-  width : 135px ; 
-  height: 135px ; 
-  border: 1px solid;
-  border-radius:  100%;
-  background-color:  #19162d5c;
-  text-align: center;
-  padding : 22px 9px;
-  box-shadow: 5px 10px;
-  display: table-cell;
-  padding: 40px 0px;
-
-}
-
-
-/* .button-group{
-  
-  margin: -14vh;
-             
-} */
-
-.link-button-resume:hover{
-
+.link:hover{
   cursor: pointer;
   background: radial-gradient(circle at 168px 124px, #1310e6d9 0%, #a61c5c54 86%, #ff00008a 95%) !important ;
 
-
-
 }
 
-.link-button-portfolio:hover{
-
-  cursor: pointer;
-  background: radial-gradient(circle at 119px 124px, #1310e6d9 0%, #a61c5c54 86%, #ff00008a 95%) !important ;
-
+.sm-btn{
+  left: 10px;
+  width : 75px ; 
+  height: 75px ; 
+  padding : 22px 9px;
 }
 
-.link-button-projects:hover{
-
-  cursor: pointer;
-  background: radial-gradient(circle at 100px 100px, #1310e6d9 0%, #a61c5c54 86%, #ff00008a 95%) !important ;
-
+.md-btn{
+  bottom: -60px;
+  left: -7px;
+  width : 100px ; 
+  height: 100px;
+  padding : 29px 0px;
 }
+
+.lg-btn{
+  
+  width : 135px ; 
+  height: 135px ; 
+  padding: 40px 0px;
+}
+
+.beerMe-btn{
+
+  
+  border: 1px solid #934c4c !important;  
+  
+  box-shadow: #934c4c 5px 10px 17px -5px !important; 
+
+  transition: border 1s ease-out;
+
+ 
+}
+ /* -------------------iphone case carousel ---------------------------*/
 
 .iphone-case-1{
    

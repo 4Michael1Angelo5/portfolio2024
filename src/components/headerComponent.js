@@ -41,7 +41,7 @@ class Header extends React.Component{
                 
                     <Navbar className= "row d-flex">
                         
-                    <div className = "col-8">
+                    <div className = "col-6">
                     
                     {/* filler to justify-content-end
                     <div className = "logo"/> */}
@@ -92,11 +92,11 @@ class Header extends React.Component{
 
                     </div>
  
-                    {/* <div className = "col d-none d-lg-block nav-btn">
+                    <div className = "col d-flex justify-content-end nav-btn">
                         <Switch toggleBeerMe = {this.props.toggleBeerMe}/>
                     </div>
 
-                     */}
+                    
 
                     
 

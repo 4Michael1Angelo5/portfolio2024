@@ -1,6 +1,6 @@
 import React from "react";
-import email from "../assets/images/Technologies/email.png";
-import gitHub from "../assets/images/Technologies/gitHub.png";
+import email from "../assets/images/icons/email.png";
+import github from "../assets/images/icons/github.png";
 
 
 class Footer extends React.Component{
@@ -26,7 +26,7 @@ class Footer extends React.Component{
 
                             GitHub: <br/>
                         
-                          <img src = {gitHub}
+                          <img src = {github}
                           style = {{
                             width: "30px"
                           }}/>
