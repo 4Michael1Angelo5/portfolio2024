@@ -34,8 +34,8 @@ class Resume extends React.Component{
                    <h1>CHRIS CHUN</h1>
 
                         <p> Full-Stack Web Developer  <br/>
-
-                        Create beautiful UX with performant code
+                        Specializing in creating seamless UX through clean code
+                        
                         </p>
                         <h3>EXPERIENCE</h3>
                         <h2> Paul Sparks Construction , Tacoma - <em>Web Developer</em></h2>
@@ -154,7 +154,7 @@ class Resume extends React.Component{
                           "link lg-btn"
                       }> 
 
-                        <img  style = {{width: "50px"}} src=  {resume}/>
+                        <img  style = {{width: "50px"}} alt= {"resume_icon" } src=  {resume}/>
                       
                       </a>
 

@@ -1,15 +1,5 @@
 
- 
- body {
-  overflow-x: hidden;
- }
-
- @font-face {
-  font-family: minfont;
-  src: url(shared/fonts/GidoleFont/Gidole-Regular.ttf);
- }
-
- @font-face {
+@font-face {
   font-family: blogger;
   src:url(shared/fonts/Blogger/Blogger/Commercial/OTF/Blogger\ Sans.otf)
    
@@ -29,9 +19,16 @@
   font-family: open-sans;
   src: url(shared//fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf)
  }
+
+ body{
+
+  width: 100%;  
+
+  overflow-x: hidden;
+ } 
  
  .App{
-  width: 100dvw;  
+
   background-image: url('./assets/images/image.png'),linear-gradient(160deg, rgba(65, 89, 208, 1) 0%, rgba(200, 80, 192, 1) 83%, rgb(205 104 54)  100%);
   background-position: 78% 0%;
   background-repeat: no-repeat;
@@ -42,20 +39,16 @@
 
  
 
-
 .navbar{
 
   background-color: #29283085;
   color: darksalmon;
   height:60px;
+ 
 }
 
-.navbar-divider{
 
-  border-left: 10px solid #DC62CD;
-  
-}
-
+ 
 /* -------------------------landing page ------------------------------------*/
  
 .landing-page h1{
@@ -101,7 +94,8 @@
   font-size: 30px;
 }
 
-
+ 
+/* ----------------------------------dark theme------------------------------- */
 .landing-page .beerMe-welcome-tab{
 
   margin: 160px  auto 50px; 
@@ -110,34 +104,29 @@
   box-shadow: 5px 10px;
   border: 10px solid;
   border-radius: 42px;
- 
   border: double 10px transparent;
-   
   background-image: linear-gradient(#19162d, #19162d), linear-gradient(to right, #673AB7, #E91E63);
   background-origin: border-box;
   background-clip: content-box, border-box;
-  transition: border 1s ease-out;
-  
-   
+  transition-property: border, padding;
+  transition-duration:  1s ;
+  transition-timing-function: ease-in;
   
   
 }
 
 .beerMe-landing-page{
   
- 
+  /* width: 100%; */
   background-image: url('./assets/images/image.png'),radial-gradient(#201a57, black);
   background-position: 78% 0%;
   background-repeat: no-repeat;
   background-blend-mode: color-dodge;
   background-attachment: fixed;
-
+  overflow-x: hidden;
   
-
-   
-  
-
 }
+ 
 
 /* ------------------------------  Beer me switch -----------------------------*/
  
@@ -158,6 +147,7 @@
   border-radius: 100px;
   position: relative;
   transition: background-color .2s;
+  
 }
 
 .react-switch-label .react-switch-button {
@@ -410,6 +400,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   border-radius: 20px;
   background-color: #1fa8dc;
   box-shadow: inset 1px 1px 1.1em 0.25em hsl(0deg 32.81% 78.55%), 0px 0px 14px 6px hsl(241.68deg 42.21% 35.27%);
+
+  
 }
 
 .tech-title{
@@ -452,11 +444,18 @@ Note: Beware of modifying this element as it can break the animations - you shou
   font-size: 12px;
 }
 
+/* ----------------footer--------------------- */
+
 .footer{
   margin-top:60px;
   width:100vw;
   height: 80px; 
   background-color: #29283085; ;
+  color:blanchedalmond;
+  
+
+   
+
 }
 
 .footer a {
@@ -464,7 +463,4 @@ Note: Beware of modifying this element as it can break the animations - you shou
   text-decoration: none; 
 }
 
-.footer{
-  color:blanchedalmond;
-}
  

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+
  
 
 class LandingPage extends React.Component{ 
@@ -42,9 +44,14 @@ class LandingPage extends React.Component{
                         web developer
                         </p>
                         <p>
-                         & full-time dad. 
-                        I create simple immersive webapps with performant code. 
-                        Check out my latest work
+                         {/* & full-time dad.  */}
+                         
+                         Specializing in creating seamless UX through clean code. Check out my latest work
+
+                          
+
+                        {/* I create simple immersive webapps with performant code.  */}
+                         
                     </p>
                         
                 </div>

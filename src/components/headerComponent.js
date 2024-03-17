@@ -37,9 +37,9 @@ class Header extends React.Component{
     render(){
         return(
 
-                <div className = "container-fluid">
+                <div className = "container-fluid ">
                 
-                    <Navbar className= "row d-flex">
+                    <Navbar className= "row d-flex align-content-center">
                         
                     <div className = "col-6">
                     
@@ -105,7 +105,7 @@ class Header extends React.Component{
 
                    
 
-                    </div> 
+                     </div> 
                     
                     
 
