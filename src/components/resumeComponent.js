@@ -39,7 +39,12 @@ class Resume extends React.Component{
                         </p>
                         <h3>EXPERIENCE</h3>
                         <h2> Paul Sparks Construction , Tacoma - <em>Web Developer</em></h2>
-                        <header>2021-2022</header>                        
+                        <header>2021-2022</header>  
+                        <ul> 
+                            <li>Manage content media, layout, and design.</li>
+                            <li>SEO Grew company revenue by 120%</li>
+                            <li>Cut bid response time by 48 hours - grew demand for services</li>
+                        </ul>                      
                         <p>
                             Design website using Wix and managed his bid requests that 
                             came through the website. Manage content media, layout, 

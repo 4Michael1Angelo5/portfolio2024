@@ -28,7 +28,7 @@
  } 
  
  .App{
-
+  min-height: 100vh;
   background-image: url('./assets/images/image.png'),linear-gradient(160deg, rgba(65, 89, 208, 1) 0%, rgba(200, 80, 192, 1) 83%, rgb(205 104 54)  100%);
   background-position: 78% 0%;
   background-repeat: no-repeat;
@@ -73,8 +73,9 @@
 }
 
 .landing-page {
+
   width: 100%;
-  min-height: 950px;
+  min-height: 100vh;
 }
 
 .landing-page .welcome-tab{
@@ -447,7 +448,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* ----------------footer--------------------- */
 
 .footer{
-  margin-top:60px;
+
+  position: relative;
+  top:0px;
+  margin-top:60px ; 
   width:100vw;
   height: 80px; 
   background-color: #29283085; ;
