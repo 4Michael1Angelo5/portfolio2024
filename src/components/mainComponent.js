@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Header from './headerComponent';
 import LandingPage from './landingPage';
-import { Routes, Route } from 'react-router-dom';
 import BurgerMenu from './menuComponent';
 import { portfolioInfo } from "../assets/PortfolioContent";
 import PortfolioOverview from './portfolioOverviewComponent';
@@ -12,125 +12,64 @@ import { projectsInfo } from '../assets/ProjectsContent';
 import Resume from './resumeComponent';
 import Footer from './footerComponent';
 
-class Main extends React.Component {
+const Main = () => {
+  const [portfolio, setPortfolio] = useState(portfolioInfo);
+  const [projects, setProjects] = useState(projectsInfo);
+  const [beerMe, setBeerMe] = useState(false);
+  const [scrollY,setSCrollY] = useState(0);
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      portfolio: portfolioInfo,
-      projects: projectsInfo,
-      beerMe: false
-
-
-    }
-    this.toggleBeerMe = this.toggleBeerMe.bind(this);
-    this.renderBeerMe = this.renderBeerMe.bind(this);
-  }
-
-  toggleBeerMe = () => {
-    this.setState({ beerMe: !this.state.beerMe })
-  }
-
-  renderBeerMe = () => {
-
-
-
-
-    if (this.state.beerMe) {
-      // document.getElementsByClassName('App').
-      let appCss = document.getElementsByClassName('App')
-      appCss[0].classList.replace("App", "beerMe-landing-page")
-    }
-    else {
-      let appCss = document.getElementsByClassName('beerMe-landing-page')
-      appCss[0].classList.replace("beerMe-landing-page", "App")
-
-    }
-
-  }
-
-
-  componentDidUpdate() {
-    this.renderBeerMe()
-  }
-
-
-
-
-  render() {
-
-
-
-
-    return (
-      <React.Fragment>
-
-        <BurgerMenu />
-
-        <Header beerMe={this.state.beerMe} toggleBeerMe={this.toggleBeerMe} />
-
-        <Routes>
-
-          <Route path='/' element={<LandingPage beerMe={this.state.beerMe} />} />
-
-          <Route path='/resume' element={<Resume beerMe={this.state.beerMe} />} />
-
-          <Route path='/projects' element={<Projects projects={this.state.projects} />} />
-
-
-          <Route path="/portfolio" element={<Portfolio projects={this.state.portfolio} />} />
-
-
-          {
-            this.state.portfolio.map((item, index) => {
-
-              return (
-
-
-                <Route
-                  key={index}
-                  path={"/portfolio/" + item.title.replace(/\s/g, '')}
-                  element={<PortfolioOverview beerMe={this.state.beerMe} project={item} />
-                  }
-                />
-
-
-
-              );
-
-            })
-
-          }
-
-          {
-            this.state.projects.map((item, index) => {
-
-              return (
-
-
-                <Route
-                  key={index}
-                  path={"/projects/" + item.title.replace(/\s/g, '')}
-                  element={<ProjectsOverview beerMe={this.state.beerMe} project={item} />
-                  }
-                />
-
-
-
-              );
-
-            })
-
-          }
-        </Routes>
-        <Footer />
-      </React.Fragment>
-
-
-    )
+  const toggleBeerMe = () => {
+    setBeerMe(!beerMe);
   };
 
+  // const handleScroll = ()=>{
+  //   setSCrollY(window.scrollY);
+  // }
 
+  // useEffect(()=>{
+    
+  //   window.addEventListener("scroll",handleScroll);
+
+  //   return(
+  //     // clean up
+  //     ()=>window.removeEventListener("scroll",handleScroll)
+  //   );
+
+  // },[scrollY])
+  
+  return (
+    <div className={beerMe ? 'beerMe-landing-page' : 'App'}
+    // style ={{
+    //   backgroundPositionY: `${scrollY}px`
+    // }}
+    >
+      <BurgerMenu />
+      <Header beerMe={beerMe} toggleBeerMe={toggleBeerMe} />
+      <Routes>
+        <Route path='/' element={<LandingPage beerMe={beerMe} />} />
+        <Route path='/resume' element={<Resume beerMe={beerMe} />} />
+        <Route path='/projects' element={<Projects projects={projects} />} />
+        <Route path='/portfolio' element={<Portfolio projects={portfolio} />} />
+
+        {portfolio.map((item, index) => (
+          <Route
+            key={index}
+            path={`/portfolio/${item.title.replace(/\s/g, '')}`}
+            element={<PortfolioOverview beerMe={beerMe} project={item} />}
+          />
+        ))}
+
+        {projects.map((item, index) => (
+          <Route
+            key={index}
+            path={`/projects/${item.title.replace(/\s/g, '')}`}
+            element={<ProjectsOverview beerMe={beerMe} project={item} />}
+          />
+        ))}
+      </Routes>
+      <Footer />
+    </div>
+  );
 };
 
-export default Main
+export default Main;

@@ -14,26 +14,26 @@ import wix from './images/Technologies/wix.png';
 
 
 // -------------Cedarcreek Forestry Pictures---------
-import cc_homePage from "./images/CedarCreek/cc_homePage.png";
-import cc_aboutPage from "./images/CedarCreek/cc_aboutPage.png";
-import cc_galleryPage from "./images/CedarCreek/cc_galleryPage.png";
-import cc_storePage from "./images/CedarCreek/cc_storePage.png";
-import cc_storeCatalog_1 from "./images/CedarCreek/cc_storeCatalogPage_1.png";
-import cc_storeCatalog_2 from "./images/CedarCreek/cc_storeCatalogPage_2.png";
-import cc_storeCatalog_3 from "./images/CedarCreek/cc_storeCatalogPage_3.png";
-import cc_storeCustomOrderPage_1 from "./images/CedarCreek/cc_storeCustomOrderPage_1.png" ; 
-import cc_storeCustomOrderPage_2 from "./images/CedarCreek/cc_storeCustomOrderPage_2.png"; 
-import cc_storeCustomOrderPage_3 from "./images/CedarCreek/cc_storeCustomOrderPage_3.png"
-import cc_checkoutPage from "./images/CedarCreek/cc_checkoutPage.png";
+import cc_homePage from "./images/CedarCreek/optomized_desktop/cc_homePage.webp";
+import cc_aboutPage from "./images/CedarCreek/optomized_desktop/cc_aboutPage.webp";
+import cc_galleryPage from "./images/CedarCreek/optomized_desktop/cc_galleryPage.webp";
+import cc_storePage from "./images/CedarCreek/optomized_desktop/cc_storePage.webp";
+import cc_storeCatalog_1 from "./images/CedarCreek/optomized_desktop/cc_storeCatalogPage_1.webp";
+import cc_storeCatalog_2 from "./images/CedarCreek/optomized_desktop/cc_storeCatalogPage_2.webp";
+import cc_storeCatalog_3 from "./images/CedarCreek/optomized_desktop/cc_storeCatalogPage_3.webp";
+import cc_storeCustomOrderPage_1 from "./images/CedarCreek/optomized_desktop/cc_storeCustomOrderPage_1.webp" ; 
+import cc_storeCustomOrderPage_2 from "./images/CedarCreek/optomized_desktop/cc_storeCustomOrderPage_2.webp"; 
+import cc_storeCustomOrderPage_3 from "./images/CedarCreek/optomized_desktop/cc_storeCustomOrderPage_3.webp"
+import cc_checkoutPage from "./images/CedarCreek/optomized_desktop/cc_checkoutPage.webp";
 
 //------------Cedar Creek Mobile--------
 
-import cc_mobile_landingPage from "./images/CedarCreek/mobile/cc_mobile_landingPage.jpg";
-import cc_mobile_aboutPage from "./images/CedarCreek/mobile/cc_mobile_aboutPage.jpg";
-import cc_mobile_galleryPage from "./images/CedarCreek/mobile/cc_mobile_galleryPage.jpg";
-import cc_mobile_catalogPage from "./images/CedarCreek/mobile/cc_mobile_catalogPage.jpg";
-import cc_mobile_checkoutPage from"./images/CedarCreek/mobile/cc_mobile_checkoutPage.jpg" ;
-import cc_mobile_customOrderPage from "./images/CedarCreek/mobile/cc_mobile_customOrderPage.jpg";
+import cc_mobile_landingPage from "./images/CedarCreek/optomized_mobile/cc_mobile_landingPage.webp";
+import cc_mobile_aboutPage from "./images/CedarCreek/optomized_mobile/cc_mobile_aboutPage.webp";
+import cc_mobile_galleryPage from "./images/CedarCreek/optomized_mobile/cc_mobile_galleryPage.webp";
+import cc_mobile_catalogPage from "./images/CedarCreek/optomized_mobile/cc_mobile_catalogPage.webp";
+import cc_mobile_checkoutPage from"./images/CedarCreek/optomized_mobile/cc_mobile_checkoutPage.webp" ;
+import cc_mobile_customOrderPage from "./images/CedarCreek/optomized_mobile/cc_mobile_customOrderPage.webp";
 
 //------------Paul SparksConstruction Pictures--------
 

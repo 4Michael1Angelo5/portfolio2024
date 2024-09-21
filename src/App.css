@@ -399,9 +399,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   box-shadow: 0px 0px 0px 2px white;
   aspect-ratio: 1/2;
   border-radius: 20px;
-  background-color: #1fa8dc;
+  background-color: #8b8c8c;
+  padding:3px;
   box-shadow: inset 1px 1px 1.1em 0.25em hsl(0deg 32.81% 78.55%), 0px 0px 14px 6px hsl(241.68deg 42.21% 35.27%);
-
+  
   
 }
 
