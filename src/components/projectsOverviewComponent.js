@@ -5,13 +5,13 @@ import sangaku from '../assets/images/sangaku.mp4' ;
  
 class ProjectsOverview extends React.Component{
 
-  componentDidMount(){
-    console.log(this.props.beerMe)
-  }
+  // componentDidMount(){
+  //   console.log(this.props.beerMe)
+  // }
 
-  componentDidUpdate(){
-    console.log(this.props.beerMe)
-  }
+  // componentDidUpdate(){
+  //   console.log(this.props.beerMe)
+  // }
  
   render(){
 

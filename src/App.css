@@ -24,18 +24,40 @@
 
   width: 100%;  
 
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+
+  /* overflow-y: auto; */
  } 
+
+ html{scroll-behavior:auto !important}
  
  .App{
   min-height: 100vh;
-  background-image: url('./assets/images/image.png'),linear-gradient(160deg, rgba(65, 89, 208, 1) 0%, rgba(200, 80, 192, 1) 83%, rgb(205 104 54)  100%);
-  background-position: 78% 0%;
-  background-repeat: no-repeat;
-  background-blend-mode: luminosity;
-  background-attachment: fixed;
+  /* background-image: url('./assets/images/back_1.png'), linear-gradient(180deg, #5E35B1, #b35489 60%, #5E35B1 100%);  */
+  /* background-color: rgb(197, 177, 232);
+  background-image: url('./assets/images/back_1.png'); */
+  /* background-color: rgb(227, 209, 187); */
+  background-image: url('./assets/images/back_1.png'), repeating-linear-gradient( #523a78 , #ee696b ,#523a78);;
+  /* background-image: url('./assets/images/back_1.webp'); */
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat-y;
+  overflow: hidden;
+  /* position: relative; */
+  /* background-blend-mode: color-dodge; */
    
  }
+
+ /* .app-background{
+  height:100%;
+  width:100%;
+  background-image: repeating-radial-gradient(blue,black);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+ } */
 
  
 
@@ -111,20 +133,21 @@
   background-clip: content-box, border-box;
   transition-property: border, padding;
   transition-duration:  1s ;
-  transition-timing-function: ease-in;
-  
+  transition-timing-function: ease-in; 
   
 }
 
 .beerMe-landing-page{
   
   /* width: 100%; */
-  background-image: url('./assets/images/image.png'),radial-gradient(#201a57, black);
-  background-position: 78% 0%;
-  background-repeat: no-repeat;
-  background-blend-mode: color-dodge;
-  background-attachment: fixed;
+  background-image: url('./assets/images/back_1.png'),radial-gradient(#201a57, black);
+  background-position: center;
+  background-repeat: repeat-y;
+  /* background-blend-mode: color-dodge;
+  background-attachment: fixed; */
   overflow-x: hidden;
+  background-size: contain;
+
   
 }
  
@@ -307,7 +330,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   font-size: larger;
   font-family: sans-serif;
   color: aliceblue ; 
-  backdrop-filter: blur(4px);
+  /* backdrop-filter: blur(4px); */
 }
 
  
@@ -333,6 +356,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .border-bottom-p{
   border-bottom: 2px solid;
   border-image: linear-gradient(90deg, blanchedalmond, #96c4eb) 30;
+}
+
+.content-decription-container{
+  background-color: rgb(61, 71, 91);
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 /* ------------------------link buttons------------------- */

@@ -6,6 +6,9 @@ import {
   CarouselIndicators,
 } from 'reactstrap';
 
+// this component displays information about a specific 
+// portfolio item
+
 const MobileGalleryContent = ({ content }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);

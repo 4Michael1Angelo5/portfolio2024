@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef} from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './headerComponent';
 import LandingPage from './landingPage';
@@ -16,32 +16,51 @@ const Main = () => {
   const [portfolio, setPortfolio] = useState(portfolioInfo);
   const [projects, setProjects] = useState(projectsInfo);
   const [beerMe, setBeerMe] = useState(false);
-  const [scrollY,setSCrollY] = useState(0);
+  const [scrollY,setScrollY] = useState(0);
+  const lastCall = useRef(0);
 
   const toggleBeerMe = () => {
     setBeerMe(!beerMe);
   };
 
-  // const handleScroll = ()=>{
-  //   setSCrollY(window.scrollY);
-  // }
+    // ============== scroll handler =======================
 
-  // useEffect(()=>{
-    
-  //   window.addEventListener("scroll",handleScroll);
+    const throttleRAF = (func, delay) => {
+      return (...args) => {
+        const now = new Date().getTime();
+        if (now - lastCall.current < delay) return;
+  
+        requestAnimationFrame(() => {
+          func(...args);
+          lastCall.current = now; // Update the ref's value
+        });
+      };
+    };
 
-  //   return(
-  //     // clean up
-  //     ()=>window.removeEventListener("scroll",handleScroll)
-  //   );
+    const handleScroll = throttleRAF(() => {
+      setScrollY(window.scrollY);
+    }, 100);
 
-  // },[scrollY])
+  useEffect(() => {
+
+      // add event listener on mount
+      window.addEventListener("scroll", handleScroll);
+      // window.addEventListener("scroll",debouncedHandleScroll)         
+
+      return () => {
+          // clean up on unmount
+          cancelAnimationFrame(lastCall.current);
+          // window.removeEventListener("scroll", debouncedHandleScroll);
+          window.removeEventListener("scroll", handleScroll);
+      }
+
+  }, [handleScroll])
   
   return (
     <div className={beerMe ? 'beerMe-landing-page' : 'App'}
-    // style ={{
-    //   backgroundPositionY: `${scrollY}px`
-    // }}
+    style ={{
+      backgroundPositionY: `${.5*scrollY}px`
+    }}
     >
       <BurgerMenu />
       <Header beerMe={beerMe} toggleBeerMe={toggleBeerMe} />
