@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b693b762.css",
-    "main.js": "/static/js/main.44c457f7.js",
+    "main.css": "/static/css/main.6c2553ca.css",
+    "main.js": "/static/js/main.839c3625.js",
     "static/js/592.6d7de513.chunk.js": "/static/js/592.6d7de513.chunk.js",
     "static/media/ps_projectsPage_1.png": "/static/media/ps_projectsPage_1.cf9d29ed27c15049daf3.png",
     "static/media/ps_aboutPage.png": "/static/media/ps_aboutPage.c0ec2b2c792e819f720b.png",
@@ -25,7 +25,8 @@
     "static/media/cc_mobile_aboutPage.webp": "/static/media/cc_mobile_aboutPage.d20dcd8fadbdc3e5444c.webp",
     "static/media/cc_galleryPage.webp": "/static/media/cc_galleryPage.7f7bd5ed3564005e841c.webp",
     "static/media/p1_m_aboutPage.jpg": "/static/media/p1_m_aboutPage.74c287ec72cbe2a1035e.jpg",
-    "static/media/back_1.png": "/static/media/back_1.c53f4f493c5f60a02586.png",
+    "static/media/back_2_edit.png": "/static/media/back_2_edit.7abe91f558e283410388.png",
+    "static/media/back_2.png": "/static/media/back_2.856dcb860bbada364681.png",
     "static/media/react.png": "/static/media/react.6bcffb56bd0efaa47767.png",
     "static/media/ps_m_landingPage.jpg": "/static/media/ps_m_landingPage.996330b0e5eff9516033.jpg",
     "static/media/p1_m_landingPage.jpg": "/static/media/p1_m_landingPage.9679f6b64f820580b46a.jpg",
@@ -72,12 +73,12 @@
     "static/media/github.png": "/static/media/github.987334e9f782cc505f25.png",
     "static/media/reactbootstrap.png": "/static/media/reactbootstrap.efdec1327625a824a51e.png",
     "index.html": "/index.html",
-    "main.b693b762.css.map": "/static/css/main.b693b762.css.map",
-    "main.44c457f7.js.map": "/static/js/main.44c457f7.js.map",
+    "main.6c2553ca.css.map": "/static/css/main.6c2553ca.css.map",
+    "main.839c3625.js.map": "/static/js/main.839c3625.js.map",
     "592.6d7de513.chunk.js.map": "/static/js/592.6d7de513.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b693b762.css",
-    "static/js/main.44c457f7.js"
+    "static/css/main.6c2553ca.css",
+    "static/js/main.839c3625.js"
   ]
 }
