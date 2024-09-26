@@ -4,7 +4,13 @@ import { Link } from 'react-router-dom';
 import GhostWriter from './ghostWriterComponent';
 
 const LandingPage = ({ beerMe }) => {
+
+  // this is the landing page. It is the first thing the use sees
+
     const [animationComplete, setAnimationComplete] = useState([false,false,false,false,false,false]);
+    
+
+
   return (
     <div className='landing-page'>
       <div className='container'>

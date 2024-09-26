@@ -5,7 +5,557 @@ $lightgrey-blue:#3d475b;
 // earth tones
 $khaki-green:#d0cfbd;
 $dark-khaki: #a69f95;
-$darker-khaki: #7a756e
+$darker-khaki: #7a756e;
 
-// pinks
+$light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e3 35%);
 
+
+@font-face {
+    font-family: blogger;
+    // src:url(/shared/fonts/Blogger/Blogger/Commercial/OTF/Blogger\ Sans.otf);  
+    src: url("/shared/fonts/Blogger/Blogger/Commercial/OTF/Blogger\ Sans.otf")
+   }
+  
+   @font-face{
+    font-family: cut-out;
+    src: url("/shared/fonts/lulo-clean-cufonfonts/Yellow\ Design\ Studio\ -\ Lulo\ Clean\ Outline\ Bold.otf");
+   }
+  
+   @font-face {
+    font-family: space-age;
+    src: url("/shared/fonts/space-age/space-age.ttf");
+   }
+  
+   @font-face{
+    font-family: open-sans;
+    src: url("/shared//fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf")
+   }
+  
+   body{
+  
+    width: 100%;  
+  
+   } 
+  
+   html{scroll-behavior:auto !important}
+   
+   .App{     
+    background-image: url('../assets/images/back_2_edit.png'); //, repeating-linear-gradient(0deg,#523a78, #ee696b, #523a78) 
+    background-size: 35%;
+    background-position: center;
+    background-repeat: repeat-y;
+    overflow: hidden;  
+    background-attachment: fixed; 
+   }
+
+   @media (min-width: 992px){
+    .App{
+      background-size: 25%;
+    }
+   }
+
+   @media (min-width: 992px){
+    .dark-theme{
+      background-size: 25% !important;
+    }
+   }
+
+   .app-background{
+    background-image: linear-gradient(315deg,#523a78, #ee696b);
+
+   }
+
+   .darktheme-background{
+    background-image: linear-gradient(90deg, black, #201a57, black);
+    // background-size: cover;
+     
+
+   }
+ 
+  
+  .navbar{
+  
+    background-color: #29283085;
+    color: darksalmon;
+    height:60px;
+   
+  }
+  
+  /* ----------------------------------dark theme------------------------------- */
+    
+  .dark-theme{
+     
+    background-image:url('../assets/images/back_2.png');
+    background-position: center;
+    background-size: 35%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;   
+    overflow: hidden;
+    
+  }
+
+
+  
+  // welcome tab for beer me button
+
+  .landing-page .beerMe-welcome-tab{
+    color: bisque;
+    margin: 160px  auto 50px; 
+    background: #19162d5c;
+    flex-direction: column; 
+    box-shadow: 5px 10px ;
+    border: 10px solid;
+    border-radius: 42px;
+    border: double 10px transparent;
+    background-image: linear-gradient(#19162d, #19162d), linear-gradient(to right, #673AB7, #E91E63);    
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    transition-property: border, padding;
+    transition-duration:  1s ;
+    transition-timing-function: ease-in; 
+    box-shadow: 5px 10px #212529;
+  }
+
+
+   
+  /* -------------------------landing page ------------------------------------*/  
+  
+  .landing-page {  
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  // ================= welcome tab design===========================
+   
+  
+  .landing-page h1{
+    font-family: cut-out;
+    font-size: 3.5rem;
+    padding:  1rem 1rem 0rem ; 
+    translate: 7px; 
+  }
+  
+  // only for welcome tab light theme
+  .welcome-tab h1{
+    color:black
+  }
+  
+  // only for welcome tab light theme
+  .welcome-tab h2{
+    color:black
+  }
+ 
+  .landing-page  h2{
+    padding: 0rem 0.5rem 0.5rem;     
+    font-family: blogger;
+    margin-bottom: 0px; 
+
+  }
+
+  // appplies to all dark theme h2
+
+  .dark-theme  h2{
+    color: #ffebcd
+  }
+  
+  // applies to all p in welcom tab
+  .welcome-tab p{
+    font-family: open-sans; 
+    font-size: 18px;
+    padding-left: 2rem;
+    padding-right:2rem;
+  }
+  
+  // modified for better readability
+  .landing-page .welcome-tab{    
+    margin: 160px  auto 50px; 
+    outline-style: solid; 
+    background-image: $light-theme-description-container;
+    flex-direction: column;
+    border-radius: 42px;
+    box-shadow: 5px 10px #212529 ;
+    color:#3d2727;
+  }
+  
+  .landing-page  .emph{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'cut-out';
+    font-size: 30px;
+  }
+  
+   
+  
+  /* ------------------------------  Beer me switch -----------------------------*/
+   
+  
+  .react-switch-checkbox {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  
+  .react-switch-label {
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    background: #c3b3b352;
+    border-radius: 100px;
+    position: relative;
+    transition: background-color .2s;
+    
+  }
+  
+  .react-switch-label .react-switch-button {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 45px;
+    height: 45px;
+    border-radius: 45px;
+    transition: 0.2s;
+    /* background: #ce93d8; */
+    background: radial-gradient(circle at 100px 100px, #1310e6d9 0%, #a61c5c54 86%, #ff00008a 95%) ;
+    box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+  }
+  
+  .react-switch-checkbox:checked + .react-switch-label .react-switch-button {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+  }
+  
+  .react-switch-label:active .react-switch-button {
+    width: 60px;
+  }
+  
+  
+  /* ------------------------------  logo -----------------------------*/
+  
+   .logo{
+  
+     
+    width: 50px;
+    height: 50px;
+    background-color: #201a57;
+    background-image: url("../assets/images/logo13.png");
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 100%;
+  
+   }
+  
+   /* ------------------------------  Burger Menu -----------------------------*/
+  /* Position and sizing of burger button */
+  .bm-burger-button {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    left: 6px;
+    top: 6px;
+    border: 1px solid rgb(222, 98, 205);
+    border-radius: 100%;
+  }
+  
+  .right .bm-burger-button {
+    left:initial ;
+    right: 36px;
+  }
+  
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: #373a47;
+  }
+  
+  /* Color/shape of burger icon bars on hover*/
+  .bm-burger-bars-hover {
+    background: #a90000;
+  }
+  
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+  
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: #bdc3c7;
+  }
+  
+  /*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+  }
+  
+  /* General sidebar styles */
+  .bm-menu {
+    background:none;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+  }
+  
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+     
+    /* fill : #111532 ; */
+    fill: #201a57 ; 
+  
+  }
+  
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+  }
+  
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+        color: aliceblue;
+      font-family: 'cut-out';
+      font-size: 1.5rem;
+      text-decoration: none;
+      line-height: 5.5rem;
+  }
+  
+  .bm-item:hover{
+    cursor: pointer;
+  }
+  
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  /* ------------------------------  Projects Page -----------------------------*/
+  
+  .long-description-light-theme{
+
+    background-image: $light-theme-description-container;
+
+  }
+  .projects-main-image{  
+    border-radius: 12px;
+    box-shadow: 1px 1px 1.1em 0.25em #dab6b6, 0px 0px 14px 6px #363480
+  }
+
+  
+  .projects-title {
+    font-family: cut-out;
+    color: blanchedalmond;
+    border-bottom: 2px solid;
+    width: fit-content;
+    border-image: linear-gradient(90deg, rgb(127, 115, 99), rgb(137, 90, 20)) 30;
+    font-size: 18px;
+   
+  }
+  
+  // for both light and dark theme on 
+  // pathname /projects and /portfolio 
+  // on light and dark theme 
+  .projects-page-h1-title{
+    font-family: cut-out;
+    color: blanchedalmond;
+    
+  }
+  
+  .projects-page-p{ 
+ 
+    font-family: sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+     
+  }
+  
+  .project-link-chill-vibes a {
+  
+    position: relative;
+    left: 10px;
+    width : 75px ; 
+    height: 75px ; 
+    border: 1px solid black ;  
+    border-radius:  100%;
+    background-color:  #19162d5c;
+    text-align: center;
+    padding : 26px 6px;
+    box-shadow: 2.5px 5px black;
+    text-decoration: none;
+    color: burlywood;
+  
+  }
+  
+  .border-bottom-p{
+    border-bottom: 2px solid;
+    border-image: linear-gradient(90deg, blanchedalmond, #96c4eb) 30;
+  }
+  
+  
+  .content-decription-container{
+    background-color: bisque;
+    background-image: $light-theme-description-container;
+    border-radius: 10px;
+    padding: 10px;
+    color: black ; 
+    margin-bottom: 10px;
+  }
+  
+  /* dark theme  */
+  
+  .dark-theme .content-decription-container{
+  
+    background-image: linear-gradient(#1b1f3b,#1b1f3b); //hack to overide 
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    color:bisque; 
+    box-shadow: 0px 0px 3px rgb(142, 165, 169);
+  
+  }
+  
+  /* ------------------------link buttons------------------- */
+  
+  .link{
+  
+    position: relative;
+    border: 1px solid #212529 ;  
+    border-radius:  100%;
+    background-color:  #19162d5c;
+    text-align: center;
+    box-shadow: #212529 2.5px 5px;
+    text-decoration: none;
+    color: burlywood ; 
+  
+  
+  }
+  
+  .link:hover{
+    cursor: pointer;
+    background: radial-gradient(circle at 168px 124px, #1310e6d9 0%, #a61c5c54 86%, #ff00008a 95%) !important ;
+  
+  }
+  
+  .sm-btn{
+    left: 10px;
+    width : 75px ; 
+    height: 75px ; 
+    padding : 22px 9px;
+  }
+  
+  .md-btn{
+    bottom: -60px;
+    left: -7px;
+    width : 100px ; 
+    height: 100px;
+    padding : 29px 0px;
+  }
+  
+  .lg-btn{
+    
+    width : 135px ; 
+    height: 135px ; 
+    padding: 40px 0px;
+  }
+  
+  .beerMe-btn{
+  
+    
+    border: 1px solid #934c4c !important;  
+    
+    box-shadow: #934c4c 1px 1px 17px -5px !important; 
+  
+    transition: border 1s ease-out;
+  
+   
+  }
+   /* -------------------iphone case carousel ---------------------------*/
+  
+  .iphone-case-1{
+     
+    width: 50%;
+    border: 2px solid hsl(223, 15%, 91%);
+    box-shadow: 0px 0px 0px 2px white;
+    aspect-ratio: 1/2;
+    border-radius: 20px;
+    background-color: #8b8c8c;
+    padding:3px;
+    box-shadow: inset 1px 1px 1.1em 0.25em #dab6b6, 0px 0px 14px 6px #363480;
+    
+  }
+  
+  .tech-title{
+    font-family: cut-out;
+    color: blanchedalmond;
+    font-size: 18px;
+  }
+   
+  
+  
+  /* -------------------------resume -----------------------------*/
+  
+  .resume-container {
+    background-color: #faebd7c7;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  
+  }
+  .resume-container h1{
+    font-family: open-sans;
+  }
+  
+  .resume-container h3{
+    font-family: space-age;
+    color: #654a21;
+    border-bottom: 2px solid;
+    width: fit-content;
+    border-image: linear-gradient(90deg, #673AB7, #E91E63) 30;
+    font-size: 18px;
+  
+  }
+  
+  .resume-container h2{ 
+   font-size: calc(1.05rem + .9vw);
+   font-family: open-sans;
+  }
+  
+  .resume-container header{
+    font-style: italic;
+    font-weight:200 ; 
+    font-size: 12px;
+  }
+  
+  /* ----------------footer--------------------- */
+  
+  .footer{
+  
+    position: relative;
+    top:0px;
+    margin-top:60px ; 
+    width:100vw;
+    height: 80px; 
+    background-color: #29283085; ;
+    color:blanchedalmond;
+    font-weight:300;
+    
+  
+     
+  
+  }
+  
+  .footer a {
+    color: blanchedalmond ;
+    text-decoration: none; 
+  }
+  
+   
+  .section{
+    display: flex;
+    justify-items: center;
+  }

@@ -1,5 +1,4 @@
 import './styles/App.scss'
-import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import React, { useEffect, useState, useRef } from 'react';
 import { Routes, Route } from 'react-router-dom';
@@ -7,14 +6,13 @@ import Header from './components/headerComponent';
 import LandingPage from './components/landingPage';
 import BurgerMenu from './components/menuComponent';
 import { portfolioInfo } from "./assets/PortfolioContent";
-import PortfolioOverview from './components/portfolioOverviewComponent';
+import PortfolioDetail from './components/portfolioDetail';
 import Portfolio from './components/portfolioComponent';
-import ProjectsOverview from './components/projectsOverviewComponent';
+import ProjectsDetail from './components/projectsDetail';
 import Projects from './components/projectsComponent';
 import { projectsInfo } from './assets/ProjectsContent';
 import Resume from './components/resumeComponent';
 import Footer from './components/footerComponent';
-
 
 const App = () => {
   const [portfolio, setPortfolio] = useState(portfolioInfo);
@@ -33,7 +31,6 @@ const App = () => {
     return (...args) => {
       const now = new Date().getTime();
       if (now - lastCall.current < delay) return;
-
       requestAnimationFrame(() => {
         func(...args);
         lastCall.current = now; // Update the ref's value
@@ -41,43 +38,31 @@ const App = () => {
     };
   };
 
-  // const handleScroll = throttleRAF(() => {
-  //   setScrollY(window.scrollY);
-  // }, 100);
-
-  const handleScroll = () => {
-    requestAnimationFrame(() => {
-      setScrollY(window.scrollY);
-    });
-  };
-
-//  const handleScroll=()=>{
-//    setScrollY(window.scrollY)
-//  }
-
+  const handleScroll = throttleRAF(() => {
+    setScrollY(window.scrollY);
+  }, 100);
+ 
   useEffect(() => {
 
     // add event listener on mount
-    window.addEventListener("scroll", handleScroll);
-    // window.addEventListener("scroll",debouncedHandleScroll)         
+    window.addEventListener("scroll", handleScroll);         
 
     return () => {
       // clean up on unmount
-      cancelAnimationFrame(lastCall.current);
-      // window.removeEventListener("scroll", debouncedHandleScroll);
+      cancelAnimationFrame(lastCall.current); 
       window.removeEventListener("scroll", handleScroll);
     }
 
   }, [handleScroll])
+  
   return (
     <BrowserRouter>
-   
-         <div className= "app-background">
-             <div className={beerMe ? 'beerMe-landing-page' : 'App'}
-                style={{
-                  backgroundPositionY: `${.5 * scrollY}px`
-                }}
-                >
+         <div div className= {beerMe? "darktheme-background" :"app-background"}>
+             <div className={beerMe? "dark-theme" : "App"}
+               style={{
+                backgroundPosition: `center ${.55 * scrollY}px`
+              }}
+              >
           <BurgerMenu />
           <Header beerMe={beerMe} toggleBeerMe={toggleBeerMe} />
           <Routes>
@@ -90,7 +75,7 @@ const App = () => {
               <Route
                 key={index}
                 path={`/portfolio/${item.title.replace(/\s/g, '')}`}
-                element={<PortfolioOverview beerMe={beerMe} project={item} />}
+                element={<PortfolioDetail beerMe={beerMe} project={item} />}
               />
             ))}
 
@@ -98,7 +83,7 @@ const App = () => {
               <Route
                 key={index}
                 path={`/projects/${item.title.replace(/\s/g, '')}`}
-                element={<ProjectsOverview beerMe={beerMe} project={item} />}
+                element={<ProjectsDetail beerMe={beerMe} project={item} />}
               />
             ))}
           </Routes>

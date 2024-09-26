@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Container } from 'reactstrap';
 import ContentComponent from './contentComponent';
 
 const Projects = ({ projects }) => {
+
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[])
   return (
 
     <ContentComponent

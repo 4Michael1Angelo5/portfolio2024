@@ -14,6 +14,7 @@ import PerfectMagicCube5Slices_850 from './images/MagicCubes/PerfectMagicCube5Sl
 import PerfectMagicCubeLines_950 from './images/MagicCubes/PerfectMagicCubeLines_950.svg';
 import matlab from './images/Technologies/matlab.png';
 import notebook from './images/MagicCubes/notebook.jpg'
+import sangaku from './images/sangaku.mp4';
 
 
 
@@ -22,6 +23,11 @@ export const projectsInfo = [
         title: "Sangaku 13",
         image: sangaku13,
         shortDescription:"While taking a college calculus course we were presented with a dificult problem \
+         while learning about sequences. My teacher described the problem as being similiar to Sangaku.\
+         Sankaku is the name given to the rigourous geometry problems adorned in the temples \
+         of the shinto shrines during the edo period of Japan. More over Sangaku can be thought \
+         of as form of meditation. My interest in these problems grew. This lead me to create my own Sankagu problem.",
+         description: "While taking a college calculus course we were presented with a dificult problem \
          while learning about sequences. My teacher described the problem as being similiar to Sangaku.\
          Sankaku is the name given to the rigourous geometry problems adorned in the temples \
          of the shinto shrines during the edo period of Japan. More over Sangaku can be thought \
@@ -74,18 +80,20 @@ export const projectsInfo = [
         ],
         technologies: [
             { title: "React", image: geogebra },
-        ],
-        description: "While taking a college calculus course we were presented with a dificult problem \
-         while learning about sequences. My teacher described the problem as being similiar to Sangaku.\
-         Sankaku is the name given to the rigourous geometry problems adorned in the temples \
-         of the shinto shrines during the edo period of Japan. More over Sangaku can be thought \
-         of as form of meditation. My interest in these problems grew. This lead me to create my own Sankagu problem.",
-        link: "https://www.geogebra.org/classic/mu5apjwb"
+        ],        
+        link: "https://www.geogebra.org/classic/mu5apjwb",
+        video:sangaku
 
     },
     {
         title: "Magic Cubes",
         image: PerfectMagicCube5_850,
+        shortDescription: "I became fascinated with magic cubes at one point and \
+        decided to write a function file in MATLAB that maps the numbers 1 through N cubed, \
+        of a given cube of order N such that N is greater than or equal to 3",
+        description:"I became fascinated with magic cubes at one point and \
+        decided to write a function file in MATLAB that maps the numbers 1 through N cubed, \
+        of a given cube of order N such that N is greater than or equal to 3",        
         projectOverview: [
             {
                 title: "What is a Magic Cube", 
@@ -119,11 +127,9 @@ export const projectsInfo = [
         ],
         technologies: [
             { title: "React", image: matlab },
-        ],
-        shortDescription: "I became fascinated with magic cubes at one point and \
-        decided to write a function file in MATLAB that maps the numbers 1 through N cubed, \
-         of a given cube of order N such that N is greater than or equal to 3",
-        link: "https://4michael1angelo5.github.io/furn-future/"
+        ],   
+        link:null
+        
 
     }
 

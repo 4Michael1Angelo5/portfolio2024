@@ -5,6 +5,12 @@ import { Container } from 'reactstrap';
 
 
 const ContentComponent = (props) => {
+
+    // content component is responsible for mapping 
+    // the content of each project and portfolio
+    // the user can click an individual portfolio piece or project
+    // and then is taken to a detailed overview of that work
+
     const [screenHeight, setScreenHeight] = useState(window.innerHeight);
 
     useEffect(() => {
@@ -26,7 +32,9 @@ const ContentComponent = (props) => {
         <React.Fragment>
             <Container>
                 <h1 className="projects-page-h1-title">{pageTitle}</h1>
+                <div className='content-decription-container'>
                 <p className="projects-page-p">{headLine}</p>
+                </div>
             </Container>
 
             <div className="container">
@@ -45,22 +53,25 @@ const ContentComponent = (props) => {
                                     ? 'd-flex flex-row-reverse row pt-2 pb-2 projects-row-container'
                                     : 'row pt-2 pb-2 projects-row-container'
                             }
+                            style={{
+                                alignContent:"center"
+                            }}
                             >
 
-                            
+
                             <div className="col-lg-6 col-sm-12 pb-2 mb-3">
-                                    <h2 className="projects-title">{item.title}</h2>
+                                <h2 className="projects-title">{item.title}</h2>
 
-                                <div className = "content-decription-container"
-                                    style={{
-                                        
-                                    backgroundColor: "#3d475b",
-                                    borderRadius: "10px"
-                             
-                                    }}
-                                    >
+                                <div className="content-decription-container"
+                                    // style={{
 
-                                <p className="projects-page-p">{item.shortDescription}</p>
+                                    //     backgroundColor: "#3d475b",
+                                    //     borderRadius: "10px"
+
+                                    // }}
+                                >
+
+                                    <p className="projects-page-p">{item.shortDescription}</p>
                                 </div>
                             </div>
 
