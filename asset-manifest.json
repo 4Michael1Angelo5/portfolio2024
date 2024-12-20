@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.38a7bb12.css",
-    "main.js": "/static/js/main.25b9a1dc.js",
+    "main.css": "/static/css/main.65e3f290.css",
+    "main.js": "/static/js/main.a98b67fd.js",
     "static/js/592.6d7de513.chunk.js": "/static/js/592.6d7de513.chunk.js",
     "static/media/ps_projectsPage_1.png": "/static/media/ps_projectsPage_1.cf9d29ed27c15049daf3.png",
     "static/media/ps_aboutPage.png": "/static/media/ps_aboutPage.c0ec2b2c792e819f720b.png",
@@ -67,9 +67,13 @@
     "static/media/cc_storeCustomOrderPage_2.webp": "/static/media/cc_storeCustomOrderPage_2.8c9ebabbac91d1366217.webp",
     "static/media/SQ.png": "/static/media/SQ.90aa501a5988f64f6bca.png",
     "static/media/parabola.png": "/static/media/parabola.7f71a1acddf4971ec18b.png",
+    "static/media/even_cipher.png": "/static/media/even_cipher.fd47e6284a16f7d29159.png",
+    "static/media/even_square.png": "/static/media/even_square.5cf346195b2af916e4e4.png",
     "static/media/pedaltriangle.png": "/static/media/pedaltriangle.cad33eea3528dba46e0f.png",
     "static/media/cc_checkoutPage.webp": "/static/media/cc_checkoutPage.90dd35bcf265d8a79f7c.webp",
     "static/media/cc_storeCatalogPage_2.webp": "/static/media/cc_storeCatalogPage_2.b4b97634a34901688c4d.webp",
+    "static/media/cipher_diagram.png": "/static/media/cipher_diagram.c5738f1b3e265b5c3298.png",
+    "static/media/magic_square.png": "/static/media/magic_square.ebabf8f4e67b66ded153.png",
     "static/media/PerfectMagicCube5_850.svg": "/static/media/PerfectMagicCube5_850.b9594c6ae6a495ebc4bfb5279ae9e8bb.svg",
     "static/media/logo13.png": "/static/media/logo13.c10d8e5e7281cae4d046.png",
     "static/media/PerfectMagicCube5Slices_850.svg": "/static/media/PerfectMagicCube5Slices_850.271bf160c3d1a9437af310a2cac5cd6b.svg",
@@ -82,15 +86,17 @@
     "static/media/javascript.png": "/static/media/javascript.062825dbceed44567e91.png",
     "static/media/d3.png": "/static/media/d3.0e0a7c55c8b6b1070b7e.png",
     "static/media/wordpress.png": "/static/media/wordpress.11ed091523e3152b651f.png",
+    "static/media/java.png": "/static/media/java.f5dd86c3ef6ef3f85acf.png",
     "static/media/github.png": "/static/media/github.987334e9f782cc505f25.png",
     "static/media/reactbootstrap.png": "/static/media/reactbootstrap.efdec1327625a824a51e.png",
+    "static/media/light1.png": "/static/media/light1.52d0b9c9cbe937d19d68.png",
     "index.html": "/index.html",
-    "main.38a7bb12.css.map": "/static/css/main.38a7bb12.css.map",
-    "main.25b9a1dc.js.map": "/static/js/main.25b9a1dc.js.map",
+    "main.65e3f290.css.map": "/static/css/main.65e3f290.css.map",
+    "main.a98b67fd.js.map": "/static/js/main.a98b67fd.js.map",
     "592.6d7de513.chunk.js.map": "/static/js/592.6d7de513.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.38a7bb12.css",
-    "static/js/main.25b9a1dc.js"
+    "static/css/main.65e3f290.css",
+    "static/js/main.a98b67fd.js"
   ]
 }
