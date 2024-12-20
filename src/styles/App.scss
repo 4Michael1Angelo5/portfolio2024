@@ -344,7 +344,10 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
   }
   .projects-main-image{  
     border-radius: 12px;
-    box-shadow: 1px 1px 1.1em 0.25em #dab6b6, 0px 0px 14px 6px #363480
+    background-color: #6f665bc7;
+    box-shadow: 1px 1px 1.1em 0.25em #dab6b6, 0px 0px 14px 6px #363480;
+    transition: all 1s ease-in-out;
+    
   }
 
   
@@ -504,7 +507,7 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
   .resume-container {
     background-color: #faebd7c7;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  
+    backdrop-filter: blur(3px);
   }
   .resume-container h1{
     font-family: open-sans;
@@ -529,6 +532,10 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
     font-style: italic;
     font-weight:200 ; 
     font-size: 12px;
+  }
+
+  .dark-theme .resume-container h2{
+    color:black;
   }
   
   /* ----------------footer--------------------- */

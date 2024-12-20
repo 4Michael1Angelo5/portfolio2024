@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Container } from 'reactstrap';
 import ContentComponent from './contentComponent';
@@ -7,18 +7,15 @@ import ContentComponent from './contentComponent';
 
 
 const Portfolio = ({ projects }) => {
- const [screenHeight,setScreenHeight] = useState(window.innerHeight);
 
+// scroll to top of page on mount
  useEffect(()=>{
-    
-    
-    window.scrollTo(0,0)
+    window.scrollTo(0,0);
+  },[])
 
- },[])
     return (
 
         <ContentComponent
-         hasLinks = {true}
          pageTitle = {"Portfolio"}
          headLine = {"Check out my latest work"}
          content = {projects}

@@ -4,16 +4,7 @@ import resume from '../assets/images/icons/resume.png'
  
 
 
-class Resume extends React.Component{
-
-
-    componentDidMount(){
-        console.log(this.props.beerMe)
-    }
-
-
-
-   
+class Resume extends React.Component{   
 
     render(){
 
@@ -38,101 +29,113 @@ class Resume extends React.Component{
                         
                         </p>
                         <h3>EXPERIENCE</h3>
-                        <h2> Paul Sparks Construction , Tacoma - <em>Web Developer</em></h2>
-                        <header>2022-2024</header>  
+
+                        <h2> <strong>Voices,</strong> Tacoma, WA - <em>Web Developer</em></h2>
+                        <header>February 2024- August 2024</header>
+                        <ul>
+                            <li>Collaborated with San Franciscan Historian Sue Lee to design 
+                                a website for her book, “Voices From the Railroad”
+                            </li>
+                            <li>Empowered Chinese American communities by making their stories 
+                                more accessible
+                            </li>
+                            <li>
+                                Enhanced UX with scroll-driven animations
+                            </li>
+                            <li>
+                                Engineered engaging Data Visualization for 
+                                Chinese railroad worker ancestry increasing conversion rate
+                            </li>
+                        </ul>
+
+                        <h2> <strong>Paul Sparks Construction</strong>, Tacoma, WA- <em>Web Developer</em></h2>
+                        <header>June 2022- January 2024</header>  
                         <ul> 
-                            <li>Manage content media, layout, and design.</li>
-                            <li>SEO Grew company revenue by 120%</li>
+                            <li>Launched online presence for a small business owner - grew demand for services</li>
+                            <li>Managed content media, layout, and design - increased customer conversion rate and improved UX.</li>
+                            <li>Optimized SEO -  grew company revenue</li>
                             <li>Cut bid response time by 48 hours - grew demand for services</li>
                         </ul>                      
-                        <p>
-                            Design website using Wix and managed his bid requests that 
-                            came through the website. Manage content media, layout, 
-                            and design. Collected 10% on each bid that came through 
-                            the website. 
-                        </p>
+    
                         <header>technologies</header>
                         <p>Wix</p>
 
 
-                        <h2>Cedarcreek Forestry, Tacoma - <em>Web Developer</em></h2>
-                        <header>2019-2020</header>
-                         
-                        
-                        <p>
-                            Built a custom website hosted on WordPress with a React 
-                            front end and WordPress backend. Used stripe API to handle 
-                            customer payments and  WooCommerece Rest API and GraphQL to 
-                            query store data and submit product orders.
-                        </p>
+                        <h2> <strong>Cedarcreek Forestry</strong>, Tacoma, WA - <em>Web Developer</em></h2>
+                        <header>January 2019- January 2020</header>
+                        <ul> 
+                            <li>
+                                Designed headless WordPress CMS with React front end -
+                                Decreased page load time by 1.4 seconds - improved UX
+                            </li>
+                            <li>
+                                Simplied checkout ow using Stripe API, WooRest API, and
+                                GraphQL - streamlining the payment process.         
+                            </li>
+                            <li>
+                                Leveraged WordPress, React, Apollo Client, SCSS, GraphQL,
+                                WooRest API, and Stripe.js to drive revenue.
+                            </li>
+                        </ul>                
                         <header>technologies</header>
                    
                         <p>
                             WordPress, React, Next.js, Apollo Client, SCSS,
                             GraphQL, WooCommerece Rest API, Stripe.js, 
-                        </p>
-
-
-                        <h2>NuCamp Coding Boot Camp, Tacoma - <em>Student</em></h2>
-                        <header>2018-2019</header>
-                        <p>Completed Full Stack Web Developer Boot Camp and learned coding 
-                            fundamentals of HTML, Javascript, CSS, Sass, git, Bootstrap, 
-                            Javascript, React, React Native, MongoDB,
-                        </p>
-
-
-                        <h2>Cider and Cedar, Tacoma - <em>Chef</em></h2>
-                        <header>2022-2024</header>
-                        <p>Head Chef at Cider and Cedar, cider taproom. Create menu, manage 
-                            inventory, schedule, create specials, cook, clean, and maintain 
-                            business relations with food vendors. 
-                        </p>
-
-                        <h3>Education</h3>
-                        <h2>College of The Redwoods, Eureka CA</h2>
-                        <header>2010-2012</header>
-                        <p>Associate in Science - Math Major</p>
-
-                        
-
-                        
-
+                        </p>              
 
                     </div>
+
                     <div className = "col-md-4 col-lg-4 col-sm-12 mt-0 mt-md-5 mt-lg-5"
                     style = {{borderLeft: "1px solid red"}}>
                         <p>email: 4michael1angelo5@gmail.com</p>
 
                         <h3>SKILLS</h3>
+                        <header>Languages</header>
                         <p>
-                            React, ReactNative. HTML, Javascript, CSS, Sass,  Bootstrap, 
-                            Wix,  WordPress, Stripe.js, MongoDB, GraphQL, Math, MATLAB, 
-                            GeoGebra
+                            JavaScript, HTML, CSS, Java, MATLAB
+                        </p>
+                        <header>Libraries & Frameworks</header>
+                        <p>
+                            React, Bootstrap, SCSS, Stripe.js, D3.js
+                        </p>
+                        <header>Tools and Technologies</header>
+                        <p>
+                            GitHub, Postman, WordPress,
+                            WooCommerce, Wix, Canva
                         </p>
 
-                        <h3>AWARDS</h3>
-                        <p>
-                            Nucamp Coding Boot Camp completion 
-                            of full stack web developer course
-                        </p>
+                        <h3>EDUCATION</h3>
+                        <h2>
+                            Tacoma Community College
+                        </h2>
+                        <header>2024</header>
+                        <p>Associate in Arts- Computer Science</p>
+                        <h2>
+                            Nucamp Coding Boot Camp
+                        </h2>
+                        <header>2018</header>
+                        <p>Full-stack Web Development</p>
 
-                        <p>
-                            2023 Top 10 Restaurants in Tacoma  Recognized for culinary 
-                            excellence as head chef of Cider and Cedar,  cider taproom.
-                        </p>
 
                         <h3>PROJECTS</h3>
+                        <h2>
+                            Magic Cypher
+                        </h2>
+                        <p>
+                            Developed cipher algorithm with magic squares for simple message encryption using Java
+                        </p>
+                        <h2>MATLAB</h2>
 
                         <p>
-                        MATLAB Write an Algorithm to produce 
-                        an Nth order magic cube such that N is an integer,
-                         doubly even or odd, and equal to or greater than 3.
+                            Algorithm to produce Magic Cubes of any order. Data Visualization of integer distribution across cells.
                         </p>
 
+                        <h2>GeoGebra</h2>
+
                         <p>
-                            GeoGebra Find a recursive function to produce a sequence 
-                            of circles such that they satisfy being tangent to y = 0
-                            and y = cos(x) and the previous circle in the sequence. 
+                            Recursive algorithm of circles tangent between y=0 and cos(x)
+
                         </p>
 
 
@@ -150,7 +153,7 @@ class Resume extends React.Component{
                        
                        
 
-                        <a href ={process.env.PUBLIC_URL + '/Chris Chun Resume.pdf'} download
+                        <a href ={process.env.PUBLIC_URL + '/Chris Chun - Webdeveloper Resume.pdf'} download
                       className = 
                       {   this.props.beerMe
                           ? 
@@ -169,15 +172,6 @@ class Resume extends React.Component{
                         </div>
                     </div>
                 </Container>
-
-           
-
-                  
-                
-
-                   
-      
- 
                 
             </React.Fragment>
         )

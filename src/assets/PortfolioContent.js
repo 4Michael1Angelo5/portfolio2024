@@ -11,6 +11,24 @@ import apollo from './images/Technologies/apollo.png';
 import woo from './images/Technologies/woo.png';
 import react_router from './images/Technologies/react_router.png';
 import wix from './images/Technologies/wix.png';
+import d3 from './images/Technologies/d3.png';
+import framerMotion from "./images/Technologies/framerMotion.png"
+
+//-----------------------Voices---------------------
+import voices_landing from "./images/Voices/voices_landing.png"
+import voices_authors from "./images/Voices/voices_authors.png"
+import voices_ancestors from "./images/Voices/voices_ancestors.png"
+import voices_family from "./images/Voices/voices_family.png"
+import voices_chapters from "./images/Voices/voices_chapters.png";
+import voices_history from "./images/Voices/voices_history.png";
+
+//----------------------Vocies mobile----------------------
+
+import voices_mobile_landing from "./images/Voices/voices_mobile_landing.PNG"
+import voices_mobile_authors from "./images/Voices/voices_mobile_authors.PNG"
+import voices_mobile_family from "./images/Voices/voices_mobile_family.PNG"
+import voices_mobile_ancestors from "./images/Voices/voices_mobile_ancestors.PNG"
+import voices_mobile_chapters from "./images/Voices/voices_mobile_chapters.PNG"
 
 
 // -------------Cedarcreek Forestry Pictures---------
@@ -65,7 +83,6 @@ import portfolio1 from'./images/Porfolio1/portfolio1.png';
 import portfolio1_aboutPage from './images/Porfolio1/portfolio1_aboutPage.png'; 
 import portfolio1_projectDetailPage from './images/Porfolio1/portfolio1_projectDetailPage.png';
 import portfolio1_menu from './images/Porfolio1/portfolio1_menu.png' ; 
-
  
 // -----------Portfolio 1 Mobile------------------------
 
@@ -77,6 +94,40 @@ import p1_m_slideMenu from './images/Porfolio1/Mobile/p1_m_slideMenu.jpg' ;
 
 
 export const portfolioInfo = [
+    {
+    title:"Voices",
+    image: voices_landing,
+    projectOverview:[
+        {title:"Landing Page", image:voices_landing},
+        {title:"About the Authors",image:voices_authors},
+        {title:"Ancestor's Page:",image:voices_ancestors},
+        {title:"Family Tree Page:", image:voices_family},
+        {title:"Chapters Page:", image:voices_chapters},
+        {title:"History Page" , image: voices_history}
+        ],
+    projectOverviewMobile:[
+        {title:"Landing Page", image:voices_mobile_landing},
+        {title:"About the Authors",image:voices_mobile_authors},
+        {title:"Ancestor's Page:",image:voices_mobile_ancestors},
+        {title:"Family Tree Page:", image:voices_mobile_family},
+        {title:"Chapters Page:", image:voices_mobile_chapters}   
+        ],
+    technologies:[
+        {title : "React", image: react},
+        {title: "D3.js", image: d3},
+        {title: "Bootstrap", image: bootstrap} ,
+        {title: "Framer Motion",image:framerMotion}
+        ],
+    shortDescription:'Voices is a website dedicated to the book, "Voices From the Railroad" ',
+    description:"This website was so fun to make! I got the chance to \
+    collaborate with San Franciscan Historian Sue Lee to design a website \
+    for her book, “Voices From the Railroad”. What drew me to this project \
+    was the opportunity to empower Chinese American communities by making \
+    their stories more accessible. It used modern design trends such as \
+    parallax effects, scroll-driven animations, and natural shape borders between sections. \
+    There is an interactive family tree that maps the descendants of Chinese railroad workers, using D3.js ",
+    link: "https://4michael1angelo5.github.io/voices/"
+    },
     {
     title: "Cedarcreek Forestry",
     image:   cc_homePage ,
@@ -156,9 +207,10 @@ export const portfolioInfo = [
     ,
     description: "The purpose of the site was to create an online presence \
     for the small business owner for him to grow his business. The client \
-    wanted a basic, simple, and clean design layout. The website was made \
-    with Wix and I was retained under his employment to manage customer bid \
-    requests and compensated 10% on successful bids.   ",
+    wanted a basic, simple, and clean design layout. I managed the content \
+    media, layout, and design. Through effective SEO strategies and ad campaigns, \
+    I grew demand for his services."
+    ,
     link:"https://4michael1angelo5.wixsite.com/paulsparksconstructi"
     
     },

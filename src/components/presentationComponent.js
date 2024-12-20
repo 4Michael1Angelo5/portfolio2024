@@ -1,10 +1,28 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import MobileGalleryContent from "./mobileGalleryComponent"
 
 // This component is responsible for presenting an 
 // individual project or portfolio work piece
 
+// its pretty much displays information in the same way as conentComponent
+// but does not have an alternating pattern
+
+//@TODO: use framer motion to animate each element on mount; 
+
 const Presentation =({project,beerMe})=>{
+
+  const [screenHeight,setScreenHeight] = useState(window.innerHeight);
+
+useEffect(()=>{
+
+  setScreenHeight(window.innerHeight);
+  // important for determing spacing bewtween sections
+  // avoiding pitfalls on mobile of setting height in vh
+
+  window.scrollTo(0,0);
+  // scroll to top of page on mount
+
+},[])
 
     const content = project.projectOverview;
 
@@ -63,21 +81,33 @@ const Presentation =({project,beerMe})=>{
           </div>
 
           {
+            // if the content has a mobile gallery to display
             mobileContent
             ?
+            // display the mobile gallery content
             <React.Fragment>
                 <h2 className="projects-page-h1-title mb-0 pt-2">Mobile</h2>
                 <MobileGalleryContent content={mobileContent} />        
                 <h2 className="projects-page-h1-title mb-0 pt-2">Desktop</h2>
             </React.Fragment>
-            :null
+            // otherwise return null
+            :
+            null
 
           }
-  
      
-          <div className="row d-flex justify-content-center pt-4">
+          <div className=" pt-4">
             {content.map((contentItem, index) => (
-              <div key={index} className="col-12 col-md-8 col-lg-8  pb-4">
+              <div key={index} className='section justify-content-center align-content-center'
+                style = {{
+                  minHeight: `${.75*screenHeight}px`, 
+                  // set the min width of each section so that 
+                  // the user can see the cool animating background inbetween sections
+                  // adjust as needed
+                  flexWrap:"wrap"
+                  }}
+                >
+              <div  className="col-12 col-md-8 col-lg-8  pb-4">
                 <h2 className="projects-title mb-3">{contentItem.title}</h2>
                 {
                     //if it has a description
@@ -101,12 +131,17 @@ const Presentation =({project,beerMe})=>{
                   }}
                 />
               </div>
+              </div>
             ))}
           </div>
         </div>
         {
+            // if it has a video prop
             project.video
             ?
+            // return the video @TODO: need to give the video fied anothe prop
+            // like videoDescription (right now only one project (sangaku13) has a
+            // video but in the future a video might be wanted for other projects/ works
             <div className="container">
             <div className="row d-flex justify-content-center pt-4">
                 <div  className="col-12 col-md-8 col-lg-8  pb-4">
@@ -126,6 +161,7 @@ const Presentation =({project,beerMe})=>{
             </div>
             </div>
             :
+            // otherwise return null
             null
         }
 

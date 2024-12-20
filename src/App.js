@@ -15,8 +15,8 @@ import Resume from './components/resumeComponent';
 import Footer from './components/footerComponent';
 
 const App = () => {
-  const [portfolio, setPortfolio] = useState(portfolioInfo);
-  const [projects, setProjects] = useState(projectsInfo);
+  const [portfolio] = useState(portfolioInfo);
+  const [projects] = useState(projectsInfo);
   const [beerMe, setBeerMe] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const lastCall = useRef(0);
@@ -25,13 +25,38 @@ const App = () => {
     setBeerMe(!beerMe);
   };
 
+  function isDarkModeEnabled() {
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+
+  // useEffect(()=>{
+  //   if(isDarkModeEnabled()){
+  //     setTimeout(()=>toggleBeerMe(),3000)
+  //   }
+
+  // },[isDarkModeEnabled()])
+
   // ============== scroll handler =======================
 
+  
+  // This function is kinda like a custom setTimeout function
+  // it takes a function to execute and a delay in miliseconds
+  // The unique thing about the function is that it utilizes requestAnimationFrame
+  // to optimize function execution by timing it to align with the browser's repaint cycle for better performace
+  
+
   const throttleRAF = (func, delay) => {
+    // throttle request animation frame
     return (...args) => {
+      // create new time stamp
       const now = new Date().getTime();
+      // if elapsed time is less than delay do nothing      
       if (now - lastCall.current < delay) return;
+      // else ok to trigger animation frame and update 
+      // current time stamp on last call ref
+
       requestAnimationFrame(() => {
+        
         func(...args);
         lastCall.current = now; // Update the ref's value
       });
@@ -39,8 +64,10 @@ const App = () => {
   };
 
   const handleScroll = throttleRAF(() => {
+    // call throttleRAF
     setScrollY(window.scrollY);
-  }, 100);
+
+  }, 100); //debounce request animation frame to every 100ms
  
   useEffect(() => {
 
@@ -57,10 +84,10 @@ const App = () => {
   
   return (
     <BrowserRouter>
-         <div div className= {beerMe? "darktheme-background" :"app-background"}>
+         <div className= {beerMe? "darktheme-background" :"app-background"}>
              <div className={beerMe? "dark-theme" : "App"}
                style={{
-                backgroundPosition: `center ${.55 * scrollY}px`
+                backgroundPosition: `center ${-.55 * scrollY}px`
               }}
               >
           <BurgerMenu />
@@ -74,7 +101,7 @@ const App = () => {
             {portfolio.map((item, index) => (
               <Route
                 key={index}
-                path={`/portfolio/${item.title.replace(/\s/g, '')}`}
+                path={`/portfolio/${item.title.replace(/\s/g, '')}`}  //TODO: need to change this to lower case
                 element={<PortfolioDetail beerMe={beerMe} project={item} />}
               />
             ))}
@@ -82,7 +109,7 @@ const App = () => {
             {projects.map((item, index) => (
               <Route
                 key={index}
-                path={`/projects/${item.title.replace(/\s/g, '')}`}
+                path={`/projects/${item.title.replace(/\s/g, '')}`} //TODO: need to change this to lower case
                 element={<ProjectsDetail beerMe={beerMe} project={item} />}
               />
             ))}
