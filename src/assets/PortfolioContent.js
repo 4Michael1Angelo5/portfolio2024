@@ -98,11 +98,40 @@ export const portfolioInfo = [
     title:"Voices",
     image: voices_landing,
     projectOverview:[
-        {title:"Landing Page", image:voices_landing},
-        {title:"About the Authors",image:voices_authors},
-        {title:"Ancestor's Page:",image:voices_ancestors},
-        {title:"Family Tree Page:", image:voices_family},
-        {title:"Chapters Page:", image:voices_chapters},
+        {
+            title:"Landing Page", 
+            image:voices_landing , 
+            description:"The landing page featured a completely interactive flip book, where the user could flip \
+            through actual pages of the book"
+        },
+        {
+            title:"About the Authors",
+            image:voices_authors,
+            description:"Each page's header features a different linear gradient transition between pages, representing \
+            transistions between different times of the day like morning, day, dusk, night, and dawn."
+        },
+        {
+            title:"Ancestor's Page:",
+            image:voices_ancestors,
+            description:"The author wanted to include information about specific railroad workers and their descendants"
+        },
+        {
+            title:"Family Tree Page:",
+            image:voices_family,
+            description:"This part of the project was very challenging. \
+            I used d3.js to make a family tree of the ancestors and their descendants. The \
+            graph is completely interactive and clicking on a descendant node triggers seperate animations \
+            and displays information about that descendant."
+        },
+        {
+            title:"Chapters Page:",
+            image:voices_chapters,
+            description:"The chapters page was also very fun to design. \
+            I used framer motion to trigger scroll linked animations on each dialogue box. \
+            An image of a railroad tie also animates as the user scrolls. \
+            I leveraged custom debounce and throttle functions with requestAnimationFrame() to sync the \
+            browsers repaint cycle with state updates to ensure smooth scrolling animations."
+        },
         {title:"History Page" , image: voices_history}
         ],
     projectOverviewMobile:[

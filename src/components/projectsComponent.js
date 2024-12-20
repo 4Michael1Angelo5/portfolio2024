@@ -16,11 +16,12 @@ const Projects = ({ projects }) => {
         pageTitle= {"Projects"}
         headLine = 
                   {
-                    "Who doesn't like a little recreational math?..(crickets). Well, I guess it's not for everyone, \
-                    but there's something about solving these complex problems that gives me great satisfaction.  \
-                    This drive to find solutions to complex, often abstract, problems, makes me excel as a web developer. \
-                    I have perseverance. I may not know everything but I can learn and I don't easily give up. \
-                    Here are some of the side projects I've worked on."
+                    "When I’m not working, I am constantly involved in side projects \
+                    and have a wide array of interests. From recreational math \
+                    projects to encryption, these side projects are what keeps \
+                    me passionate about coding. They lead me down diverse fields of \
+                    study, challenge me to acquire new skills, and keep me up to date \
+                    with emerging technologies. Check out some of my latest work. "
                   }        
         content = {projects}
          

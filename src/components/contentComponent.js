@@ -29,22 +29,6 @@ const ImageComponent = ({item, idx})=>{
 
     return(
 
-        // <motion.img
-        //     className="projects-main-image"
-        //     ref={ref}
-        //     src={item.image}
-        //     alt={item.title}
-        //     width="100%"
-        //     initial={{ opacity: 0, x: 200 * (-1) ** idx }}
-        //     animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 200 * (-1) ** idx }}
-        //     transition={{
-        //       duration: 1, // Same duration for both
-        //       ease: "easeInOut", // Apply easing
-        //       // You can add delay if needed: delay: 0.2,
-                 
-        //     }}
-        // />
-
         <img
         className="projects-main-image"
             ref={ref}
@@ -66,7 +50,6 @@ const ContentComponent = (props) => {
 
     const [screenHeight, setScreenHeight] = useState(window.innerHeight);
     
-    
     let content = props.content 
     let pageTitle = props.pageTitle;
     let headLine = props.headLine;
@@ -79,10 +62,7 @@ const ContentComponent = (props) => {
         // important for determing spacing between images /avoids using vh
 
         window.scrollTo(0, 0)
-        // scroll to top of page on mount
-
-      
-        
+        // scroll to top of page on mount        
     }, [])
 
 
@@ -116,8 +96,7 @@ const ContentComponent = (props) => {
                             }
                             style={{
                                 alignContent: "center"
-                            }}
-                        >
+                            }}>
 
 
                             <div className="col-lg-6 col-sm-12 pb-2 mb-3">

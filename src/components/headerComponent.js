@@ -1,9 +1,13 @@
 import React from 'react'; 
 import  {Navbar} from 'reactstrap';
 import {Link } from 'react-router-dom';
+import dark1 from "../assets/images/icons/dark1.png";
+import light1 from "../assets/images/icons/light1.png";
+ 
 
 
 const Switch = (props) => {
+  const icon = props.beerMe? dark1:light1;
     return (
       <>
         <input
@@ -16,8 +20,12 @@ const Switch = (props) => {
           className="react-switch-label"
           htmlFor={`react-switch-new`}
         >
+           
           <span className={`react-switch-button`}
-                   
+            style={{
+              backgroundImage:` radial-gradient(circle at 100px 100px, #1310e6d9 0%, #a61c5c54 86%, #ff00008a 95%),url(${icon})`,
+              backgroundSize:"contain"
+            }}    
           />
         </label>
 
@@ -90,7 +98,7 @@ class Header extends React.Component{
                     </div>
  
                     <div className = "col d-flex justify-content-end nav-btn">
-                        <Switch toggleBeerMe = {this.props.toggleBeerMe}/>
+                        <Switch beerMe = {this.props.beerMe} toggleBeerMe = {this.props.toggleBeerMe}/>
                     </div>
 
                     

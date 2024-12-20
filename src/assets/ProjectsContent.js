@@ -16,22 +16,71 @@ import matlab from './images/Technologies/matlab.png';
 import notebook from './images/MagicCubes/notebook.jpg'
 import sangaku from './images/sangaku.mp4';
 
+//-------------------MagicCypher--------------------------
+import javaa from "./images/icons/java.png"
 
+import cipher_diagram from "./images/MagicCypher/cipher_diagram.png"
+import even_cipher from "./images/MagicCypher/even_cipher.png"
+import even_square from "./images/MagicCypher/even_square.png"
+import magic_square from "./images/MagicCypher/magic_square.png"
 
 export const projectsInfo = [
     {
+        title:"MagicCypher",
+        image:cipher_diagram,
+        shortDescription:"Java application using magic squares to produce cipherd text",
+        description:'MagicCypher is a Java-based encryption tool that utilizes the properties \
+        of magic squares to cipher text messages. The program can handle both plain text input \
+        and text files, making it versatile for different use cases. The algorithm ensures that the \
+        encrypted message retains specific "magic" properties, making it a unique approach to data encryption.',
+        projectOverview:[
+            {
+                title:"What is a magic square?",
+                image: magic_square,
+                description:" A magic square is a two-dimensional array of integers containing the numbers 1 through N^2 such that the sum of any row, column, or two diagonals equals the same number, the magic constant."
+
+            },
+            {
+                title:"How it works",
+                image: cipher_diagram,
+                description:"It arranges the \
+                    letters in a square the same way numbers are placed inside magic squares, then reads \
+                    each row of the square to produce the cipher. MagicCypher can handle both plain text \
+                    input and text files, making it versatile for different use cases. MagicCypher uses a \
+                    reverse process to handle decryption."
+            },
+            {
+                title:"Even Square",
+                image: even_square, 
+            },
+            {
+                title:"Even Cipher",
+                image: even_cipher, 
+            }
+        ],
+        technologies: [
+            {
+                title:"java",
+                image:javaa
+            }
+
+        ]
+
+        ,
+        link:"https://github.com/4Michael1Angelo5/Magic-Cypher"
+
+    },
+    {
         title: "Sangaku 13",
         image: sangaku13,
-        shortDescription:"While taking a college calculus course we were presented with a dificult problem \
-         while learning about sequences. My teacher described the problem as being similiar to Sangaku.\
-         Sankaku is the name given to the rigourous geometry problems adorned in the temples \
-         of the shinto shrines during the edo period of Japan. More over Sangaku can be thought \
-         of as form of meditation. My interest in these problems grew. This lead me to create my own Sankagu problem.",
-         description: "While taking a college calculus course we were presented with a dificult problem \
-         while learning about sequences. My teacher described the problem as being similiar to Sangaku.\
-         Sankaku is the name given to the rigourous geometry problems adorned in the temples \
-         of the shinto shrines during the edo period of Japan. More over Sangaku can be thought \
-         of as form of meditation. My interest in these problems grew. This lead me to create my own Sankagu problem.",
+        shortDescription:"Who doesn't like a little recreational math?..(crickets). Well, I guess it's not for everyone. \
+        I created a difficult Sangaku problem to solve and used GeoGebra to help me solve it",
+      
+        description: "While taking a college calculus course we were presented with a dificult problem \
+        while learning about sequences. My teacher described the problem as being similiar to Sangaku.\
+        Sangaku is the name given to the rigourous geometry problems adorned in the temples \
+        of the shinto shrines during the edo period of Japan. More over Sangaku can be thought \
+        of as form of meditation. My interest in these problems grew. This lead me to create my own Sankagu problem.",
         projectOverview: [
             {
                 title: "The Problem", 

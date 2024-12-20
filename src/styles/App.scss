@@ -131,7 +131,7 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
   .landing-page h1{
     font-family: cut-out;
     font-size: 3.5rem;
-    padding:  1rem 1rem 0rem ; 
+    margin-top:  1rem ; 
     translate: 7px; 
   }
   
@@ -218,7 +218,7 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
     border-radius: 45px;
     transition: 0.2s;
     /* background: #ce93d8; */
-    background: radial-gradient(circle at 100px 100px, #1310e6d9 0%, #a61c5c54 86%, #ff00008a 95%) ;
+    background-image: radial-gradient(circle at 100px 100px, #1310e6d9 0%, #a61c5c54 86%, #ff00008a 95%) ;
     box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
   }
   

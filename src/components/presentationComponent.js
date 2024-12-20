@@ -58,11 +58,11 @@ useEffect(()=>{
               null
 
             }
-         
-  
+            
+            {/* display list of technologies used in the project */}
             <h3 className="tech-title">Technologies</h3>
-            <div className="container-fluid d-flex">
-              <div className="row d-flex">
+            <div className="container-fluid">
+              <div className="row">
                 {project.technologies.map((item, index) => (
                   <div key={index} className="col-1 pr-1 pl-1">
                     <img
@@ -102,7 +102,7 @@ useEffect(()=>{
                 style = {{
                   minHeight: `${.75*screenHeight}px`, 
                   // set the min width of each section so that 
-                  // the user can see the cool animating background inbetween sections
+                  // the user can see the cool animating background in between sections
                   // adjust as needed
                   flexWrap:"wrap"
                   }}
