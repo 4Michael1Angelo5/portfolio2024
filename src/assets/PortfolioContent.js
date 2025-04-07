@@ -29,6 +29,7 @@ import voices_mobile_authors from "./images/Voices/voices_mobile_authors.PNG"
 import voices_mobile_family from "./images/Voices/voices_mobile_family.PNG"
 import voices_mobile_ancestors from "./images/Voices/voices_mobile_ancestors.PNG"
 import voices_mobile_chapters from "./images/Voices/voices_mobile_chapters.PNG"
+//@TODO need to optimize these to webp
 
 
 // -------------Cedarcreek Forestry Pictures---------
