@@ -2,24 +2,36 @@ import './styles/App.scss'
 import { BrowserRouter } from 'react-router-dom';
 import React, { useEffect, useState, useRef } from 'react';
 import { Routes, Route } from 'react-router-dom';
+
+// app constants new
+import {PORTFOLIO} from './assets/PortfolioContent1';
+import {PROJECTS} from "./assets/ProjectsContent1";
+
+// app constants old
+// import { portfolioInfo } from "./assets/PortfolioContent";
+// import { projectsInfo } from './assets/ProjectsContent'
+
+// components
 import Header from './components/headerComponent';
 import LandingPage from './components/landingPage';
 import BurgerMenu from './components/menuComponent';
-import { portfolioInfo } from "./assets/PortfolioContent";
-import PortfolioDetail from './components/portfolioDetail';
-import Portfolio from './components/portfolioComponent';
-import ProjectsDetail from './components/projectsDetail';
-import Projects from './components/projectsComponent';
-import { projectsInfo } from './assets/ProjectsContent';
 import Resume from './components/resumeComponent';
 import Footer from './components/footerComponent';
 
+
+// displays all information on a specific portfolio piece or project.
+import AssetStory from "./components/assetDetailComponent";
+
+// displays links to all projects and portfolio pieces.
+import {ContentComponent} from "./components/contentComponent";
+
 const App = () => {
-  const [portfolio] = useState(portfolioInfo);
-  const [projects] = useState(projectsInfo);
   const [beerMe, setBeerMe] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const lastCall = useRef(0);
+
+  const [portfolio2] = useState(PORTFOLIO);
+  const [projects2] = useState(PROJECTS);
 
   const toggleBeerMe = () => {
     setBeerMe(!beerMe);
@@ -43,7 +55,6 @@ const App = () => {
   // it takes a function to execute and a delay in miliseconds
   // The unique thing about the function is that it utilizes requestAnimationFrame
   // to optimize function execution by timing it to align with the browser's repaint cycle for better performace
-  
 
   const throttleRAF = (func, delay) => {
     // throttle request animation frame
@@ -95,24 +106,54 @@ const App = () => {
           <Routes>
             <Route path='/' element={<LandingPage beerMe={beerMe} />} />
             <Route path='/resume' element={<Resume beerMe={beerMe} />} />
-            <Route path='/projects' element={<Projects projects={projects} />} />
-            <Route path='/portfolio' element={<Portfolio projects={portfolio} />} />
-
-            {portfolio.map((item, index) => (
               <Route
-                key={index}
-                path={`/portfolio/${item.title.replace(/\s/g, '')}`}  //TODO: need to change this to lower case
-                element={<PortfolioDetail beerMe={beerMe} project={item} />}
+                  path = "portfolio"
+                  element =
+                      {
+                          <ContentComponent
+                                  content ={PORTFOLIO}
+                                  pageTitle={"Portfolio"}
+                                  headLine={
+                                      "When I’m not working, I am constantly involved in side projects \
+                                       and have a wide array of interests. From recreational math \
+                                       projects to encryption, these side projects are what keeps \
+                                       me passionate about coding. They lead me down diverse fields of \
+                                       study, challenge me to acquire new skills, and keep me up to date \
+                                       with emerging technologies. Check out some of my latest work. "
+                                  }
+                          />
+                      }
               />
-            ))}
-
-            {projects.map((item, index) => (
               <Route
-                key={index}
-                path={`/projects/${item.title.replace(/\s/g, '')}`} //TODO: need to change this to lower case
-                element={<ProjectsDetail beerMe={beerMe} project={item} />}
+                  path = "projects"
+                  element =
+                      {
+                          <ContentComponent
+                              content ={PROJECTS}
+                              headLine={"Check out my latest work"}
+                              pageTitle={"projects"}
+                          />
+                      }
               />
-            ))}
+              {
+                  portfolio2.map((project, idx) => (
+                      <Route
+                          key = {idx}
+                          path = {`/portfolio/${project.title.replace(/\s/g, '')}`}
+                          element={<AssetStory asset = {project} darkMode = {beerMe} />}
+                      />
+                  ))
+              }
+              {
+                  projects2.map((project, idx) => (
+                      <Route
+                          key = {idx}
+                          path = {`/projects/${project.title.replace(/\s/g, '')}`}
+                          element={<AssetStory asset = {project} darkMode = {beerMe} />}
+                      />
+                  ))
+              }
+
           </Routes>
           <Footer />
         </div>

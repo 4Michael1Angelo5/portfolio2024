@@ -10,8 +10,7 @@ class Resume extends React.Component{
 
         return(
 
-             
-        
+            
             <React.Fragment>
 
               
@@ -26,9 +25,25 @@ class Resume extends React.Component{
 
                         <p> Full-Stack Web Developer  <br/>
                         Specializing in creating seamless UX through clean code
-                        
                         </p>
+
                         <h3>EXPERIENCE</h3>
+                        <h2> <strong>Magic Cypher,</strong> Tacoma, WA - <em>Full-Stack Developer</em></h2>
+                        <header> August 2024 - Present</header>
+                        <ul>
+                            <li>
+                                Built a full-stack encryption web app with Next.js and TypeScript, 
+                                using a custom magic square algorithm to encrypt text and images.
+                            </li>
+                            <li>
+                                Developed a secure Next.js API backend with Prisma and PostgreSQL 
+                                for server-side encryption and user authentication.
+                            </li>
+                            <li>
+                                Implemented WebGL animations for real-time encryption visualization
+                            </li>
+                        </ul>
+
 
                         <h2> <strong>Voices,</strong> Tacoma, WA - <em>Web Developer</em></h2>
                         <header>February 2024- August 2024</header>
@@ -54,7 +69,7 @@ class Resume extends React.Component{
                             <li>Launched online presence for a small business owner - grew demand for services</li>
                             <li>Managed content media, layout, and design - increased customer conversion rate and improved UX.</li>
                             <li>Optimized SEO -  grew company revenue</li>
-                            <li>Cut bid response time by 48 hours - grew demand for services</li>
+                            <li>Cut bid response time by 24 hours - grew demand for services</li>
                         </ul>                      
     
                         <header>technologies</header>
@@ -66,7 +81,7 @@ class Resume extends React.Component{
                         <ul> 
                             <li>
                                 Designed headless WordPress CMS with React front end -
-                                Decreased page load time by 1.4 seconds - improved UX
+                                Decreased page load time by 0.8 seconds - improved UX
                             </li>
                             <li>
                                 Simplied checkout ow using Stripe API, WooRest API, and
@@ -93,28 +108,33 @@ class Resume extends React.Component{
                         <h3>SKILLS</h3>
                         <header>Languages</header>
                         <p>
-                            JavaScript, HTML, CSS, Java, MATLAB
+                            JavaScript, HTML, CSS, Java
                         </p>
                         <header>Libraries & Frameworks</header>
                         <p>
-                            React, Bootstrap, SCSS, Stripe.js, D3.js
+                            React, Next.js, Bootstrap, D3.js, Junit, Framer Motion
                         </p>
                         <header>Tools and Technologies</header>
                         <p>
-                            GitHub, Postman, WordPress,
-                            WooCommerce, Wix, Canva
+                           AI, git, Postman, Vercel, WebGL, GraphQL, WordPress, WooCommerce 
                         </p>
 
                         <h3>EDUCATION</h3>
+                        <h2> 
+                            University of Washington Tacoma
+                        </h2>
+                        <header>Expected 2027</header>
+                        <p>Bachelor of Science - Computer Science</p>
+
                         <h2>
                             Tacoma Community College
                         </h2>
                         <header>2024</header>
-                        <p>Associate in Arts- Computer Science</p>
+                        <p>Associate in Arts - Computer Science</p>
                         <h2>
                             Nucamp Coding Boot Camp
                         </h2>
-                        <header>2018</header>
+                        <header>2019</header>
                         <p>Full-stack Web Development</p>
 
 
@@ -131,11 +151,10 @@ class Resume extends React.Component{
                             Algorithm to produce Magic Cubes of any order. Data Visualization of integer distribution across cells.
                         </p>
 
-                        <h2>GeoGebra</h2>
+                        <h2>Tetris Game</h2>
 
                         <p>
-                            Recursive algorithm of circles tangent between y=0 and cos(x)
-
+                            Built a Tetris Game in Java using Swing with MVC architecture
                         </p>
 
 

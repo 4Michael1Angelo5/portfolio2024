@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import {useState, useCallback, useEffect} from 'react';
 import {
     Carousel,
     CarouselItem,
@@ -7,11 +7,15 @@ import {
   } from 'reactstrap';
 
 
-// This component is responible for showing what a portfolio piece looks like on mobile
+// This component is responsible for showing what a portfolio piece looks like on mobile
 
 const MobileGalleryContent = ({ content }) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
+
+    useEffect(() => {
+        console.log(content)
+    }, [content]);
   
     const onExiting = useCallback(() => {
       setAnimating(true);
@@ -47,11 +51,24 @@ const MobileGalleryContent = ({ content }) => {
         <h3 className="projects-title text-center">{item.title}</h3>
         <div className="container d-flex justify-content-center p-3">
           <div className="iphone-case-1 col col-md-3 col-lg-3">
-            <img src={item.image}
-              width="100%"
-              alt={item.title}
-              style={{ borderRadius: "15px" }}
-            />
+              {
+                  item.media.type === "image" &&
+                  <img src={item.media.src}
+                       width="100%"
+                       alt={item.title}
+                       style={{ borderRadius: "15px" }}
+                  />
+
+              }
+              {
+                  item.media.type === "video" &&
+                  <video
+                      src = {item.media.src}
+                      width="100%"
+                      loop
+                  />
+              }
+
           </div>
         </div>
       </CarouselItem>
