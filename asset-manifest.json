@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.65e3f290.css",
-    "main.js": "/static/js/main.a98b67fd.js",
+    "main.js": "/static/js/main.6a9f291c.js",
     "static/js/592.6d7de513.chunk.js": "/static/js/592.6d7de513.chunk.js",
     "static/media/ps_projectsPage_1.png": "/static/media/ps_projectsPage_1.cf9d29ed27c15049daf3.png",
     "static/media/ps_aboutPage.png": "/static/media/ps_aboutPage.c0ec2b2c792e819f720b.png",
@@ -15,13 +15,15 @@
     "static/media/voices_mobile_landing.PNG": "/static/media/voices_mobile_landing.d2a950febfc1adad2df7.PNG",
     "static/media/cc_mobile_galleryPage.webp": "/static/media/cc_mobile_galleryPage.c131c95aa17ba2615c2d.webp",
     "static/media/voices_mobile_family.PNG": "/static/media/voices_mobile_family.8c1462171bc55b8edcad.PNG",
+    "static/media/cover_mobile.PNG": "/static/media/cover_mobile.360e55a282517ef395d2.PNG",
     "static/media/voices_chapters.png": "/static/media/voices_chapters.eda3a463ef67fe292b53.png",
     "static/media/ps_projectsPage.png": "/static/media/ps_projectsPage.261e8f1df29fbfb68a00.png",
     "static/media/voices_landing.png": "/static/media/voices_landing.c16c87b2117950248919.png",
     "static/media/notebook.jpg": "/static/media/notebook.3fbb98096fb11825ac53.jpg",
     "static/media/ps_servicesPage.png": "/static/media/ps_servicesPage.41599a768bcfcc8e3cc3.png",
-    "static/media/sangaku.mp4": "/static/media/sangaku.71cc776485d61f989f91.mp4",
+    "static/media/encrypted.PNG": "/static/media/encrypted.e287e9a530fc6bf60374.PNG",
     "static/media/voices_family.png": "/static/media/voices_family.e3eb031210d4f325ba53.png",
+    "static/media/image.PNG": "/static/media/image.418491cdbbb6ea288f95.PNG",
     "static/media/voices_authors.png": "/static/media/voices_authors.d42f4fceec32b38cb529.png",
     "static/media/sangaku13.png": "/static/media/sangaku13.4504ef348e4249489d69.png",
     "static/media/portfolio1_projectDetailPage.png": "/static/media/portfolio1_projectDetailPage.0127c6333fd210e75fac.png",
@@ -34,8 +36,11 @@
     "static/media/cc_homePage.webp": "/static/media/cc_homePage.9f72f7174bfbcd6e83ff.webp",
     "static/media/ps_m_projectsPage1.jpg": "/static/media/ps_m_projectsPage1.ef3fad553e27a2133e12.jpg",
     "static/media/cc_mobile_aboutPage.webp": "/static/media/cc_mobile_aboutPage.d20dcd8fadbdc3e5444c.webp",
+    "static/media/skeleton.PNG": "/static/media/skeleton.5b7d76c80adf4cb801e8.PNG",
+    "static/media/cover.jpg": "/static/media/cover.63768e10aaef4109acf1.jpg",
     "static/media/cc_galleryPage.webp": "/static/media/cc_galleryPage.7f7bd5ed3564005e841c.webp",
     "static/media/p1_m_aboutPage.jpg": "/static/media/p1_m_aboutPage.74c287ec72cbe2a1035e.jpg",
+    "static/media/oauth_m.PNG": "/static/media/oauth_m.97d7cf588a9a1a1920cd.PNG",
     "static/media/back_2_edit.png": "/static/media/back_2_edit.7abe91f558e283410388.png",
     "static/media/back_2.png": "/static/media/back_2.856dcb860bbada364681.png",
     "static/media/react.png": "/static/media/react.6bcffb56bd0efaa47767.png",
@@ -63,6 +68,7 @@
     "static/media/PAbsect.png": "/static/media/PAbsect.f4ff55ecb071acc75ebb.png",
     "static/media/cc_storeCatalogPage_3.webp": "/static/media/cc_storeCatalogPage_3.1d4c44272ac1100441b7.webp",
     "static/media/stripe.png": "/static/media/stripe.80afaafee00af0bc21d3.png",
+    "static/media/oauth.png": "/static/media/oauth.7f69a3a49b35acf3b622.png",
     "static/media/ps_m_contactPage.jpg": "/static/media/ps_m_contactPage.574a95a5dbe9b9337491.jpg",
     "static/media/cc_storeCustomOrderPage_2.webp": "/static/media/cc_storeCustomOrderPage_2.8c9ebabbac91d1366217.webp",
     "static/media/SQ.png": "/static/media/SQ.90aa501a5988f64f6bca.png",
@@ -92,11 +98,11 @@
     "static/media/light1.png": "/static/media/light1.52d0b9c9cbe937d19d68.png",
     "index.html": "/index.html",
     "main.65e3f290.css.map": "/static/css/main.65e3f290.css.map",
-    "main.a98b67fd.js.map": "/static/js/main.a98b67fd.js.map",
+    "main.6a9f291c.js.map": "/static/js/main.6a9f291c.js.map",
     "592.6d7de513.chunk.js.map": "/static/js/592.6d7de513.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.65e3f290.css",
-    "static/js/main.a98b67fd.js"
+    "static/js/main.6a9f291c.js"
   ]
 }
