@@ -37,24 +37,13 @@ const App = () => {
     setBeerMe(!beerMe);
   };
 
-  function isDarkModeEnabled() {
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  }
-
-  // useEffect(()=>{
-  //   if(isDarkModeEnabled()){
-  //     setTimeout(()=>toggleBeerMe(),3000)
-  //   }
-
-  // },[isDarkModeEnabled()])
 
   // ============== scroll handler =======================
 
-  
   // This function is kinda like a custom setTimeout function
-  // it takes a function to execute and a delay in miliseconds
+  // it takes a function to execute and a delay in milliseconds
   // The unique thing about the function is that it utilizes requestAnimationFrame
-  // to optimize function execution by timing it to align with the browser's repaint cycle for better performace
+  // to optimize function execution by timing it to align with the browser's repaint cycle for better performance
 
   const throttleRAF = (func, delay) => {
     // throttle request animation frame

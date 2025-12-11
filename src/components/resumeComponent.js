@@ -23,8 +23,9 @@ class Resume extends React.Component{
                     style ={{borderBottom:"1px solid red"}} >
                    <h1>CHRIS CHUN</h1>
 
-                        <p> Full-Stack Web Developer  <br/>
-                        Specializing in creating seamless UX through clean code
+                        <p> Full-Stack Developer  <br/>
+                            Reliable systems, smooth interfaces, and properly seasoned tacos.
+
                         </p>
 
                         <h3>EXPERIENCE</h3>
@@ -43,38 +44,37 @@ class Resume extends React.Component{
                                 Implemented WebGL animations for real-time encryption visualization
                             </li>
                         </ul>
+                       <header>technologies</header>
 
+                       <p>
+                           React, Next.js, PrismaORM, NextAuth, PostgreSQL, TypeScript, WebGL
+                       </p>
 
-                        <h2> <strong>Voices,</strong> Tacoma, WA - <em>Web Developer</em></h2>
+                       <h2> <strong>Voices,</strong> Tacoma, WA - <em>Web Developer</em></h2>
                         <header>February 2024- August 2024</header>
                         <ul>
-                            <li>Collaborated with San Franciscan Historian Sue Lee to design 
-                                a website for her book, “Voices From the Railroad”
+                            <li>Designed a website for historian Sue Lee’s book, "Voices From the Railroad",
+                                amplifying Chinese American stories through accessible digital storytelling.
+
                             </li>
-                            <li>Empowered Chinese American communities by making their stories 
-                                more accessible
-                            </li>
-                            <li>
-                                Enhanced UX with scroll-driven animations
+                            <li> Enhanced UX with scroll-driven animations for immersive engagement.
                             </li>
                             <li>
-                                Engineered engaging Data Visualization for 
-                                Chinese railroad worker ancestry increasing conversion rate
+                                Developed data visualizations of Chinese railroad worker ancestry,
+                                increasing user engagement.
                             </li>
                         </ul>
+
 
                         <h2> <strong>Paul Sparks Construction</strong>, Tacoma, WA- <em>Web Developer</em></h2>
                         <header>June 2022- January 2024</header>  
                         <ul> 
                             <li>Launched online presence for a small business owner - grew demand for services</li>
-                            <li>Managed content media, layout, and design - increased customer conversion rate and improved UX.</li>
-                            <li>Optimized SEO -  grew company revenue</li>
-                            <li>Cut bid response time by 24 hours - grew demand for services</li>
-                        </ul>                      
-    
-                        <header>technologies</header>
-                        <p>Wix</p>
-
+                            <li>Managed content media, layout, and design - increased conversion rate.</li>
+                            <li>Added a contact button—slashed bid response time by 24 hours, expanding
+                                business revenue.
+                            </li>
+                        </ul>
 
                         <h2> <strong>Cedarcreek Forestry</strong>, Tacoma, WA - <em>Web Developer</em></h2>
                         <header>January 2019- January 2020</header>
@@ -84,7 +84,7 @@ class Resume extends React.Component{
                                 Decreased page load time by 0.8 seconds - improved UX
                             </li>
                             <li>
-                                Simplied checkout ow using Stripe API, WooRest API, and
+                                Simplified checkout ow using Stripe API, WooRest API, and
                                 GraphQL - streamlining the payment process.         
                             </li>
                             <li>
@@ -108,15 +108,17 @@ class Resume extends React.Component{
                         <h3>SKILLS</h3>
                         <header>Languages</header>
                         <p>
-                            JavaScript, HTML, CSS, Java
+                            JavaScript,
+                            TypeScript, Java, HTML,
+                            CSS
                         </p>
                         <header>Libraries & Frameworks</header>
                         <p>
-                            React, Next.js, Bootstrap, D3.js, Junit, Framer Motion
+                            React, Next.js, Bootstrap, D3.js, Junit, Framer Motion, Stripe
                         </p>
                         <header>Tools and Technologies</header>
                         <p>
-                           AI, git, Postman, Vercel, WebGL, GraphQL, WordPress, WooCommerce 
+                           AI, postgreSQL, git, Postman, Vercel, WebGL, GraphQL, WordPress, WooCommerce
                         </p>
 
                         <h3>EDUCATION</h3>
@@ -132,15 +134,22 @@ class Resume extends React.Component{
                         <header>2024</header>
                         <p>Associate in Arts - Computer Science</p>
                         <h2>
-                            Nucamp Coding Boot Camp
+                            NuCamp Coding Boot Camp
                         </h2>
                         <header>2019</header>
                         <p>Full-stack Web Development</p>
 
 
                         <h3>PROJECTS</h3>
+
+                        <h2>Tetris Game</h2>
+
+                        <p>
+                            Built a Tetris Game in Java using Swing with MVC architecture
+                        </p>
+
                         <h2>
-                            Magic Cypher
+                            Magic Cypher (CLI)
                         </h2>
                         <p>
                             Developed cipher algorithm with magic squares for simple message encryption using Java
@@ -151,11 +160,6 @@ class Resume extends React.Component{
                             Algorithm to produce Magic Cubes of any order. Data Visualization of integer distribution across cells.
                         </p>
 
-                        <h2>Tetris Game</h2>
-
-                        <p>
-                            Built a Tetris Game in Java using Swing with MVC architecture
-                        </p>
 
 
 
@@ -172,7 +176,7 @@ class Resume extends React.Component{
                        
                        
 
-                        <a href ={process.env.PUBLIC_URL + '/Chris Chun - Webdeveloper Resume.pdf'} download
+                        <a href ={process.env.PUBLIC_URL + '/Chris Chun - Resume.pdf'} download
                       className = 
                       {   this.props.beerMe
                           ? 
@@ -181,7 +185,7 @@ class Resume extends React.Component{
                           "link lg-btn"
                       }> 
 
-                        <img  style = {{width: "50px"}} alt= {"resume_icon" } src=  {resume}/>
+                        <img  style = {{width: "50px"}} alt= {"resume_icon" } src = {resume}/>
                       
                       </a>
 
@@ -196,6 +200,6 @@ class Resume extends React.Component{
         )
     }
 
-};
+}
 
 export default Resume 

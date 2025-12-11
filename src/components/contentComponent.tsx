@@ -42,7 +42,7 @@ export const ContentComponent:React.FC<ContentComponentProps> = ({content,pageTi
                    content.map((item,idx) => (
                        <div
                            key = {idx}
-                           className = "section"
+                           className = "section"  // may need to remove/ change if you want position sticky to work.
                            style={{
                                minHeight: `${screenHeight * .75}px`,
                                // alignContent:"center"
@@ -55,7 +55,8 @@ export const ContentComponent:React.FC<ContentComponentProps> = ({content,pageTi
                                        : 'row pt-2 pb-2 projects-row-container'
                                }
                                style={{
-                                   alignContent: "center"
+                                   alignContent: "center",
+                                   // height:"100%" // experimental
                                }}>
 
                            <div className="col-lg-6 col-sm-12 pb-2 mb-3">
@@ -68,9 +69,18 @@ export const ContentComponent:React.FC<ContentComponentProps> = ({content,pageTi
                                </div>
                            </div>
 
-                           <div className="col-lg-6 col-sm-12 pb-3">
+                           <div className="col-lg-6 col-sm-12 pb-3"
+                                // style={{ // experimental remove if this does not work
+                                //     position: 'relative', // Important: sticky needs a positioned parent
+                                //     height: "100vh",
+                                //     overflowY: "auto",
+                                // }}
 
-                               <Link to={`${location.pathname + "/" + item.title.replace(/\s/g, '')}`}>
+                           >
+
+                               <Link
+                                   // className = "image-sticky-wrapper" // experimental remove if does not work
+                                   to={`${location.pathname + "/" + item.title.replace(/\s/g, '')}`}>
 
                                    <ImageComponent
                                        key = {idx}
@@ -79,9 +89,7 @@ export const ContentComponent:React.FC<ContentComponentProps> = ({content,pageTi
                                    />
 
                                </Link>
-
-
-                           </div>
+                            </div>
                            </div>
                        </div>
                    ))

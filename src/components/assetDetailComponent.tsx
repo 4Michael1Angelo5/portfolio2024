@@ -1,4 +1,4 @@
-import React, {useState, useEffect, ReactNode} from 'react';
+import React from 'react';
 import MobileGalleryContent from "./mobileGalleryComponent"
 import {AssetDetail, PersonalAsset} from "../assets/PersonalAssests";
 import {useScreenHeight} from "./useScreenHeight";
@@ -46,9 +46,10 @@ const AssetStory:React.FC<PresentationProps>
                 {/*    Display a list of technologies used in the project / portfolio piece*/}
                     <div className="container-fluid">
                         <div className="row">
-                            {asset.technologies.map((item, index) => (
+                            {asset.technologies.map((item) => (
                                 <div key={item.src} className="col-1 pr-1 pl-1">
                                     <img
+                                        key = {item.src}
                                         src={item.src}
                                         style={{
                                             minWidth: "100%",
@@ -68,12 +69,11 @@ const AssetStory:React.FC<PresentationProps>
                             <h2 className="projects-page-h1-title mb-0 pt-2">Mobile</h2>
                             <MobileGalleryContent content={mobileContent} />
                             <h2 className="projects-page-h1-title mb-0 pt-2">Desktop</h2>
-
                         </>
                     }
                     <div className=" pt-4">
                         {
-                            content.map((asset, index) => (
+                            content.map((asset) => (
                                 <StoryPanel
                                     key = {asset.title}
                                     panel={asset}
@@ -136,6 +136,7 @@ const StoryPanel:React.FC<StoryPanelProps> = ({panel,screenHeight}) => {
                                 autoPlay
                                 playsInline
                                 loop
+                                muted
                                 style={{ marginLeft: "0px", marginRight: "0px", width: "100%" }}
                             />
                         }

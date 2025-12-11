@@ -1,3 +1,4 @@
+
 // dark blue tones
 $darkgrey-blue: #263144; 
 $lightgrey-blue:#3d475b;
@@ -12,23 +13,22 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
 
 @font-face {
     font-family: blogger;
-    // src:url(/shared/fonts/Blogger/Blogger/Commercial/OTF/Blogger\ Sans.otf);  
-    src: url("/shared/fonts/Blogger/Blogger/Commercial/OTF/Blogger\ Sans.otf")
+    src: url("../shared/fonts/Blogger/Blogger/Commercial/OTF/Blogger Sans.otf");
    }
   
    @font-face{
     font-family: cut-out;
-    src: url("/shared/fonts/lulo-clean-cufonfonts/Yellow\ Design\ Studio\ -\ Lulo\ Clean\ Outline\ Bold.otf");
+    src: url("../shared/fonts/lulo-clean-cufonfonts/Clean-Outline-Bold.otf");
    }
   
    @font-face {
     font-family: space-age;
-    src: url("/shared/fonts/space-age/space-age.ttf");
+    src: url("../shared/fonts/space-age/space-age.ttf");
    }
   
    @font-face{
     font-family: open-sans;
-    src: url("/shared//fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf")
+    src: url("../shared/fonts/Open_Sans/open-sans.ttf")
    }
   
    body{
@@ -40,11 +40,12 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
    html{scroll-behavior:auto !important}
    
    .App{     
-    background-image: url('../assets/images/back_2_edit.png'); //, repeating-linear-gradient(0deg,#523a78, #ee696b, #523a78) 
+    background-image: url('../assets/images/back_2_edit.png'); //, repeating-linear-gradient(0deg,#523a78, #ee696b, #523a78)
     background-size: 35%;
     background-position: center;
     background-repeat: repeat-y;
-    overflow: hidden;  
+    overflow: hidden;
+    // overflow-x: hidden; may need to change this back for position sticky to work.
     background-attachment: fixed; 
    }
 
@@ -62,14 +63,11 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
 
    .app-background{
     background-image: linear-gradient(315deg,#523a78, #ee696b);
-
    }
 
    .darktheme-background{
     background-image: linear-gradient(90deg, black, #201a57, black);
     // background-size: cover;
-     
-
    }
  
   
@@ -91,6 +89,7 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
     background-repeat: repeat-y;
     background-attachment: fixed;   
     overflow: hidden;
+    //overflow-x: hidden;  may need to change this back for position sticky to work.
     
   }
 
@@ -100,14 +99,13 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
 
   .landing-page .beerMe-welcome-tab{
     color: bisque;
-    margin: 160px  auto 50px; 
-    background: #19162d5c;
-    flex-direction: column; 
-    box-shadow: 5px 10px ;
-    border: 10px solid;
+    margin: 160px  auto 50px;
+    flex-direction: column;
+    //box-shadow: 5px 10px ;
+    //border: 10px solid;
     border-radius: 42px;
     border: double 10px transparent;
-    background-image: linear-gradient(#19162d, #19162d), linear-gradient(to right, #673AB7, #E91E63);    
+    background-image: linear-gradient(#19162d, #19162d), linear-gradient(90deg, #673ab7, #e91e63);
     background-origin: border-box;
     background-clip: content-box, border-box;
     transition-property: border, padding;
@@ -129,7 +127,7 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
    
   
   .landing-page h1{
-    font-family: cut-out;
+    font-family: cut-out, serif;
     font-size: 3.5rem;
     margin-top:  1rem ; 
     translate: 7px; 
@@ -146,21 +144,21 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
   }
  
   .landing-page  h2{
-    padding: 0rem 0.5rem 0.5rem;     
-    font-family: blogger;
-    margin-bottom: 0px; 
+    padding: 0 0.5rem 0.5rem;
+    font-family: blogger, serif;
+    margin-bottom: 0;
 
   }
 
-  // appplies to all dark theme h2
+  // applies to all dark theme h2
 
   .dark-theme  h2{
     color: #ffebcd
   }
   
-  // applies to all p in welcom tab
+  // applies to all p in welcome tab
   .welcome-tab p{
-    font-family: open-sans; 
+    font-family: open-sans, serif;
     font-size: 18px;
     padding-left: 2rem;
     padding-right:2rem;
@@ -178,14 +176,13 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
   }
   
   .landing-page  .emph{
-    margin: 0px;
-    padding: 0px;
-    font-family: 'cut-out';
+    margin: 0;
+    padding: 0;
+    font-family: 'cut-out', serif;
     font-size: 30px;
   }
   
-   
-  
+
   /* ------------------------------  Beer me switch -----------------------------*/
    
   
@@ -230,23 +227,7 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
   .react-switch-label:active .react-switch-button {
     width: 60px;
   }
-  
-  
-  /* ------------------------------  logo -----------------------------*/
-  
-   .logo{
-  
-     
-    width: 50px;
-    height: 50px;
-    background-color: #201a57;
-    background-image: url("../assets/images/logo13.png");
-    background-size: cover;
-    background-position: bottom;
-    border-radius: 100%;
-  
-   }
-  
+
    /* ------------------------------  Burger Menu -----------------------------*/
   /* Position and sizing of burger button */
   .bm-burger-button {
@@ -319,7 +300,7 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
   .bm-item {
     display: inline-block;
         color: aliceblue;
-      font-family: 'cut-out';
+      font-family: 'cut-out', serif;
       font-size: 1.5rem;
       text-decoration: none;
       line-height: 5.5rem;
@@ -345,14 +326,30 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
   .projects-main-image{  
     border-radius: 12px;
     background-color: #6f665bc7;
-    box-shadow: 1px 1px 1.1em 0.25em #dab6b6, 0px 0px 14px 6px #363480;
-    transition: all 1s ease-in-out;
-    
+    box-shadow: 1px 1px 1.1em 0.25em #dab6b6, 0 0 14px 6px #363480;
+    //transition: all 1s ease-in-out;
+    //transition: all .5s cubic-bezier(0.42, 0, 0.48, 1.88)
+    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), // Easing the movement
+    opacity .4s ease-in-out, // Easing the fade
+    box-shadow .8s ease-in-out; // Easing the shadow change
   }
+
+
+.image-sticky-wrapper {
+  position: sticky;
+  top: 80px; // Add some offset from top (adjust as needed)
+  height: auto; // Change from 100vh to auto
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Optional: Add a max-height so it doesn't get too tall
+  max-height: 80vh;
+}
 
   
   .projects-title {
-    font-family: cut-out;
+    font-family: cut-out, serif;
     color: blanchedalmond;
     border-bottom: 2px solid;
     width: fit-content;
@@ -365,9 +362,8 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
   // pathname /projects and /portfolio 
   // on light and dark theme 
   .projects-page-h1-title{
-    font-family: cut-out;
+    font-family: cut-out, serif;
     color: blanchedalmond;
-    
   }
   
   .projects-page-p{ 
@@ -375,7 +371,6 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
     font-family: sans-serif;
     font-weight: 200;
     font-size: 18px;
-     
   }
   
   .project-link-chill-vibes a {
@@ -392,7 +387,6 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
     box-shadow: 2.5px 5px black;
     text-decoration: none;
     color: burlywood;
-  
   }
   
   .border-bottom-p{
@@ -420,7 +414,7 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
     margin-bottom: 10px;
 
     color:bisque; 
-    box-shadow: 0px 0px 3px rgb(142, 165, 169);
+    box-shadow: 0 0 3px rgb(142, 165, 169);
   
   }
   
@@ -458,44 +452,37 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
     left: -7px;
     width : 100px ; 
     height: 100px;
-    padding : 29px 0px;
+    padding : 29px 0;
   }
   
   .lg-btn{
     
     width : 135px ; 
     height: 135px ; 
-    padding: 40px 0px;
+    padding: 40px 0;
   }
   
   .beerMe-btn{
-  
-    
-    border: 1px solid #934c4c !important;  
-    
-    box-shadow: #934c4c 1px 1px 17px -5px !important; 
-  
+    border: 1px solid #934c4c !important;
+    box-shadow: #934c4c 1px 1px 17px -5px !important;
     transition: border 1s ease-out;
-  
-   
   }
    /* -------------------iphone case carousel ---------------------------*/
   
   .iphone-case-1{
-     
     width: 50%;
     border: 2px solid hsl(223, 15%, 91%);
-    box-shadow: 0px 0px 0px 2px white;
+    //box-shadow: 0px 0px 0px 2px white;
     aspect-ratio: 1/2;
     border-radius: 20px;
-    background-color: #8b8c8c;
+    background-color: white; //#8b8c8c;
     padding:3px;
-    box-shadow: inset 1px 1px 1.1em 0.25em #dab6b6, 0px 0px 14px 6px #363480;
+    box-shadow: inset 1px 1px 1.1em 0.25em #dab6b6, 0 0 14px 6px #363480;
     
   }
   
   .tech-title{
-    font-family: cut-out;
+    font-family: cut-out, serif;
     color: blanchedalmond;
     font-size: 18px;
   }
@@ -506,15 +493,15 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
   
   .resume-container {
     background-color: #faebd7c7;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     backdrop-filter: blur(3px);
   }
   .resume-container h1{
-    font-family: open-sans;
+    font-family: open-sans, serif;
   }
   
   .resume-container h3{
-    font-family: space-age;
+    font-family: space-age, serif;
     color: #654a21;
     border-bottom: 2px solid;
     width: fit-content;
@@ -525,7 +512,7 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
   
   .resume-container h2{ 
    font-size: calc(1.05rem + .9vw);
-   font-family: open-sans;
+   font-family: open-sans, serif;
   }
   
   .resume-container header{
@@ -543,25 +530,20 @@ $light-theme-description-container: linear-gradient(132deg, #e09082 0%, #f8dba4e
   .footer{
   
     position: relative;
-    top:0px;
+    top:0;
     margin-top:60px ; 
     width:100vw;
     height: 80px; 
     background-color: #29283085; ;
     color:blanchedalmond;
     font-weight:300;
-    
-  
-     
-  
   }
   
   .footer a {
     color: blanchedalmond ;
     text-decoration: none; 
   }
-  
-   
+
   .section{
     display: flex;
     justify-items: center;

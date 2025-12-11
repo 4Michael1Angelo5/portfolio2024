@@ -63,8 +63,11 @@ const MobileGalleryContent = ({ content }) => {
               {
                   item.media.type === "video" &&
                   <video
+                      style = {{height:"100%", width:"100%"}}
                       src = {item.media.src}
                       width="100%"
+                      muted
+                      autoPlay= {true}
                       loop
                   />
               }
@@ -77,7 +80,12 @@ const MobileGalleryContent = ({ content }) => {
     return (
       <div className="container pt-0 pb-3 border-bottom-p">
         <div className="row">
-          <Carousel activeIndex={activeIndex} next={next} previous={previous}>
+          <Carousel
+              activeIndex={activeIndex}
+              next={next}
+              previous={previous}
+              interval={80000}
+          >
             <CarouselIndicators items={content} activeIndex={activeIndex} onClickHandler={goToIndex} />
             {slides}
             <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />

@@ -15,16 +15,29 @@ import react_router from './images/Technologies/react_router.png';
 import wix from './images/Technologies/wix.png';
 import d3 from './images/Technologies/d3.png';
 import framerMotion from "./images/Technologies/framerMotion.png"
+import vercel from "./images/Technologies/vercel.svg"
+import webgl from "./images/Technologies/webgl.png"
+import neon from "./images/Technologies/neon.png"
+import typescript from "./images/Technologies/typescript.png";
+import prisma from "./images/Technologies/prisma.png"
 
 //----------------------Magic Cypher----------------------
 import cover from "./images/MagicCypherApp/cover.jpg";
+import oauth from "./images/MagicCypherApp/oauth.png";
+import mc_image_animation from "./images/MagicCypherApp/mc_image_animation.webm";
+import encrypted_text from "./images/MagicCypherApp/encrypted-text.webp"
+import encrypted_image from "./images/MagicCypherApp/encrypted-image.png"
+import cipherVault from "./images/MagicCypherApp/cipherVault.png";
+
+//---------------------- Magic Cypher Mobile-----------------------------
+
+import encryptedText from "./images/MagicCypherApp/encryptedText.PNG";
+import image from "./images/MagicCypherApp/image.PNG";
 import cover_mobile from "./images/MagicCypherApp/cover_mobile.PNG";
 import skeleton from "./images/MagicCypherApp/skeleton.PNG";
-import image from "./images/MagicCypherApp/image.PNG";
 import encrytped from "./images/MagicCypherApp/encrypted.PNG";
-import oauth from "./images/MagicCypherApp/oauth.png";
-import oauth_m from "./images/MagicCypherApp/oauth_m.PNG"
-//--------------------------------------------------------
+import oauth_m from "./images/MagicCypherApp/oauth_m.PNG";
+import mc_tiktok from "./images/MagicCypherApp/mc_tiktok.webm";
 
 //-----------------------Voices---------------------
 import voices_landing from "./images/Voices/voices_landing.png"
@@ -103,9 +116,12 @@ export const PORTFOLIO:PersonalAsset[] = [
         link: "https://magic-cypher-app.vercel.app/",
         technologies:[
             {title : "React", src: react},
-            {title: "D3.js", src: d3},
+            {title : "TypeScript", src: typescript},
+            {title: "Vercel", src: vercel},
             {title: "Bootstrap", src: bootstrap} ,
-            {title: "Framer Motion",src:framerMotion}
+            {title: "WebGl",src:webgl},
+            {title: "Neon", src: neon},
+            {title: "Prisma", src: prisma}
         ],
         description:
             "Magic Cypher is a passion project born of a long-standing love for math and cyberpunk aesthetics. " +
@@ -126,8 +142,19 @@ export const PORTFOLIO:PersonalAsset[] = [
                     "unchanged."
             },
             {
+                title: "Text Ciphers",
+                media: {type: "image", src: encrypted_text},
+                description:
+                    "How it works? A user inputs a text message they wish to encrypt and clicks submit. " +
+                    "The encryption engine takes over and determines based on the the number of characters " +
+                    "in the text message which magic square algorithm to use. For example if the user's message is " +
+                    "45 characters long, an odd 7x7 magic square is generated and the message is padded with 4 " +
+                    "extra characters. 45 + 4 = 7 x 7 = 49. Then the app reads concatenates each row to form the final " +
+                    "encrypted message. For decryption a similar process  in the reverse order is used. That's it!"
+            },
+            {
                 title: "New Takes on Old Techniques",
-                media : {type: "image", src: cover},
+                media : {type: "image", src: encrypted_image},
                 description:
                     "I borrowed techniques from 2D video game map rendering to encrypt images. Games often use a " +
                     "“sprite atlas,” where a single image contains many smaller tiles, and the engine assembles a " +
@@ -138,7 +165,7 @@ export const PORTFOLIO:PersonalAsset[] = [
             },
             {
                 title: "GPU-Powered Encryption Animation",
-                media: {type:"image" ,src: cover},
+                media: {type:"video" ,src: mc_image_animation},
                 description:
                     "One of the coolest features of the app is real-time visualization of the image " +
                     "encryption process. I used WebGL to unlock GPU-accelerated animations. Users watch their images" +
@@ -152,6 +179,16 @@ export const PORTFOLIO:PersonalAsset[] = [
                     "Encryption runs securely on the server, and users can sign in with GitHub or Google to save " +
                     "and revisit their ciphers. The app uses Prisma ORM with a Neon PostgresSQL backend to manage " +
                     "user data and encrypted outputs."
+            },
+            {
+                title: "Cipher Vault",
+                media: {type: "image" , src: cipherVault},
+                description:
+                    "The ciper vault was intended to be a premium feature to allow users to store and retrieve their " +
+                    "encrypted messages. The user authenticates via Oauth (google, or github), then when ever they " +
+                    "encrypt messages they are automatically stored securely so that they can be retrieved later. For " +
+                    "future releases I plan to extend this functionality for image ciphers."
+
             }
         ],
         mobileAssets: [
@@ -159,7 +196,14 @@ export const PORTFOLIO:PersonalAsset[] = [
                 title:"Home Page", media: {type: "image", src: cover_mobile}
             },
             {
+                title: "Interactive Encryption", media: {type: "video" , src : mc_tiktok}
+
+            },
+            {
                 title:"Skeleton Loader", media: {type: "image", src: skeleton}
+            },
+            {
+              title: "Encrypted Text", media: {type: "image", src: encryptedText}
             },
             {
                 title:"Image Cipher", media: {type: "image" , src: image}

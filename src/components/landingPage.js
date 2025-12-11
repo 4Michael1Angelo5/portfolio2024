@@ -1,14 +1,13 @@
 import React from 'react';
-import { useState } from 'react';
+// import { useState } from 'react'
 import { Link } from 'react-router-dom';
-import GhostWriter from './ghostWriterComponent';
+// import GhostWriter from './ghostWriterComponent';
 
 const LandingPage = ({ beerMe }) => {
 
-  // this is the landing page. It is the first thing the use sees
+  // this is the landing page. It is the first thing the user sees
 
-    const [animationComplete, setAnimationComplete] = useState([false,false,false,false,false,false]);
-    
+    // const [animationComplete, setAnimationComplete] = useState([false,false,false,false,false,false]);
 
 
   return (
@@ -19,7 +18,8 @@ const LandingPage = ({ beerMe }) => {
           <div className='col'>
             <div className={beerMe ? 'beerMe-welcome-tab d-flex flex-column text-center' : 'welcome-tab d-flex flex-column text-center'}>
               <h1>
-                <GhostWriter animationComplete = {animationComplete} index = {0} setAnimationComplete = {()=>setAnimationComplete} greeting={'Hello'} />
+                {/*<GhostWriter animationComplete = {animationComplete} index = {0} setAnimationComplete = {()=>setAnimationComplete} greeting={'Hello'} />*/}
+              HELLO
               </h1>
               <h2>
                 {/* <GhostWriter animationComplete = {animationComplete} index = {1} setAnimationComplete = {()=>setAnimationComplete} greeting={'my name is'} /> <em>Chris Chun</em> */}
@@ -28,10 +28,11 @@ const LandingPage = ({ beerMe }) => {
               <p className='mb-0'>
                 I am a <u>full-stack</u>
               </p>
-              <p className='emph'>web developer</p>
+              <p className='emph'>developer</p>
               <p>
-                Specializing in creating seamless UX through clean code. Check out my latest work
+                  Reliable systems, smooth interfaces, and properly seasoned tacos.
               </p>
+                <p>Check out my latest work</p>
             </div>
           </div>
           <div className='col d-none d-md-block d-lg-block'></div>
