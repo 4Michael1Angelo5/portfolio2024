@@ -66,8 +66,9 @@ const MobileGalleryContent = ({ content }) => {
                       style = {{height:"100%", width:"100%"}}
                       src = {item.media.src}
                       width="100%"
-                      muted
-                      autoPlay= {true}
+                      muted = {true}
+                      playsInline= {true}
+                      autoPlay = {true}
                       loop
                   />
               }
@@ -84,7 +85,7 @@ const MobileGalleryContent = ({ content }) => {
               activeIndex={activeIndex}
               next={next}
               previous={previous}
-              interval={80000}
+              interval={3000}
           >
             <CarouselIndicators items={content} activeIndex={activeIndex} onClickHandler={goToIndex} />
             {slides}
