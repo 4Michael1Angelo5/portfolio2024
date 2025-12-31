@@ -37,7 +37,7 @@ import cover_mobile from "./images/MagicCypherApp/cover_mobile.PNG";
 import skeleton from "./images/MagicCypherApp/skeleton.PNG";
 import encrytped from "./images/MagicCypherApp/encrypted.PNG";
 import oauth_m from "./images/MagicCypherApp/oauth_m.PNG";
-import mc_tiktok from "./images/MagicCypherApp/mc_tiktok.webm";
+import mc_tiktok from "./images/MagicCypherApp/mc_tiktok.mp4";
 
 //-----------------------Voices---------------------
 import voices_landing from "./images/Voices/voices_landing.png"

@@ -1,4 +1,4 @@
-import {useState, useCallback, useEffect} from 'react';
+import {useState, useCallback, useEffect, useRef} from 'react';
 import {
     Carousel,
     CarouselItem,
@@ -12,37 +12,46 @@ import {
 const MobileGalleryContent = ({ content }) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
+    // const videoRefs = useRef([]); // Add this
+
+
 
     useEffect(() => {
-        console.log(content)
-    }, [content]);
-  
+        // Only load on mobile
+        if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/eruda';
+            document.body.appendChild(script);
+            script.onload = () => window.eruda.init();
+        }
+    }, []);
+
     const onExiting = useCallback(() => {
       setAnimating(true);
     }, []);
-  
+
     const onExited = useCallback(() => {
       setAnimating(false);
     }, []);
-  
+
     const next = useCallback(() => {
       if (animating) return;
       const nextIndex = activeIndex === content.length - 1 ? 0 : activeIndex + 1;
       setActiveIndex(nextIndex);
     }, [animating, activeIndex, content.length]);
-  
+
     const previous = useCallback(() => {
       if (animating) return;
       const nextIndex = activeIndex === 0 ? content.length - 1 : activeIndex - 1;
       setActiveIndex(nextIndex);
     }, [animating, activeIndex, content.length]);
-  
+
     const goToIndex = useCallback((newIndex) => {
       if (animating) return;
       setActiveIndex(newIndex);
     }, [animating]);
-  
-    const slides = content.map((item) => (
+
+    const slides = content.map((item,index) => (
       <CarouselItem
         onExiting={onExiting}
         onExited={onExited}
@@ -77,7 +86,7 @@ const MobileGalleryContent = ({ content }) => {
         </div>
       </CarouselItem>
     ));
-  
+
     return (
       <div className="container pt-0 pb-3 border-bottom-p">
         <div className="row">
@@ -85,7 +94,7 @@ const MobileGalleryContent = ({ content }) => {
               activeIndex={activeIndex}
               next={next}
               previous={previous}
-              interval={3000}
+              interval={3500}
           >
             <CarouselIndicators items={content} activeIndex={activeIndex} onClickHandler={goToIndex} />
             {slides}
